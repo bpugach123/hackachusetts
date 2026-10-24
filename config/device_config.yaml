@@ -1,0 +1,75 @@
+# Device_Config for the MA tidal buoy siting model (Req 1.1, 1.2, 12.1).
+# Loaded and validated by pipeline/siting/config.py. Missing keys fall back to
+# the defaults in siting.config.DeviceConfig. Units are noted on each line.
+
+# --- Grid (validated before any fetch; invalid values stop the run, Req 1.3) ---
+cell_size_mi: 1.0               # statute miles, accepted [0.25, 5]
+outer_extent_nm: 12.0           # nautical miles from shoreline, accepted [3, 200]
+
+# --- Reference device ---
+rated_power_kw: 100             # kW
+rotor_diameter_m: 5             # m, Tidal_Stream_Device rotor
+# Power_Coefficient (dimensionless, (0, 1]). 0.40 sits inside the 0.35-0.45 range
+# reported for horizontal-axis tidal turbines, below the Betz limit of 16/27 ~ 0.593.
+# Sources: Betz, A. (1920) "Das Maximum der theoretisch moeglichen Ausnuetzung des
+# Windes durch Windmotoren"; Neary et al. (2014) "Methodology for Design and Economic
+# Analysis of Marine Energy Conversion (MEC) Technologies", Sandia SAND2014-9040
+# (DOE Reference Model 1 tidal turbine).
+power_coefficient: 0.40
+pad_area_m2: 50                 # m², Rise_Fall_Device pad area
+conversion_efficiency: 0.30     # dimensionless, (0, 1], Rise_Fall_Device (illustrative assumption)
+# Semidiurnal cycles per year: 8766 h/yr / 12.42 h (M2 period) = 705.8.
+# Source: NOAA CO-OPS, "Tides and Currents: Types and Causes of Tidal Cycles".
+tidal_cycles_per_year: 705.8    # cycles/yr
+# Seawater density (kg/m³). 1025 is the standard mean near-surface ocean value.
+# Sources: IOC, SCOR and IAPSO (2010) "The international thermodynamic equation of
+# seawater - 2010" (TEOS-10), Manual and Guides No. 56, UNESCO; IEC TS 62600-200:2013
+# (tidal energy resource assessment) uses 1025 kg/m³ when site data are absent.
+seawater_density: 1025          # kg/m³
+
+# --- Resource ---
+velocity_source_priority: [NECOFS_FVCOM, DOPPIO, MOM6, NOAA_CURRENTS]  # source ids, first available wins
+min_power_density_wm2: 500      # W/m²
+min_depth_m: 5                  # m
+min_qualifying_area_km2: 0.5    # km²
+baseline_credit: 40             # score (0-100)
+benchmark_velocity_ms: 2.5      # m/s
+max_station_distance_km: 25     # km, CO-OPS station match radius
+max_buoy_distance_km: 100       # km, NDBC buoy match radius
+min_range_m: 1.0                # m, tidal range scoring 0
+max_range_m: 3.0                # m, tidal range scoring 100
+
+# --- Grid Proximity ---
+grid_full_km: 1                 # km, distance scoring 100
+grid_zero_km: 30                # km, distance scoring 0
+grid_weights:                   # weight (dimensionless)
+  transmission: 0.5
+  substation: 0.5
+
+# --- Conflict ---
+fish_zero_km: 5                 # km, diadromous fish proximity scoring 0
+conflict_weights: null          # weight (dimensionless); null = equal weights
+
+# --- Feasibility ---
+depth_bands:                    # m, [lo, hi] per device type
+  seabed: [15, 35]
+  buoy: [5, 15]
+feasibility:                    # [full-score, zero-score] ramp thresholds
+  slope_deg: [5, 15]            # deg
+  wave_hs_m: [1, 3]             # m, mean significant wave height
+  port_km: [10, 50]             # km
+
+# --- Profitability (illustrative PROXY slopes, Req 10.2; multiplier = 1 + k * input) ---
+profitability:
+  k_transport_per_km: 0.01      # 1/km, port distance
+  k_transmission_per_km: 0.01   # 1/km, min(transmission, substation) distance
+  k_maint_port_per_km: 0.01     # 1/km, port distance
+  k_maint_wave_per_m: 0.10      # 1/m, mean significant wave height
+  baseline_annual_cost_usd: 20000  # USD/yr
+
+# --- Hard exclusions (layer ids) ---
+hard_exclusion_layers:
+  - protected_habitat
+  - residential_shoreline
+  - shipping_lanes
+  - cable_areas

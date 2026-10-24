@@ -1,0 +1,57 @@
+[
+ {
+  "site": "Muskeget Channel",
+  "ref_lat": 41.36,
+  "ref_lon": -70.4,
+  "path": "tidal_stream",
+  "matched_cell_id": "C1609-0095-0024",
+  "distance_mi": 0.51,
+  "resource_percentile": 100.0,
+  "status": "pass",
+  "reason": null
+ },
+ {
+  "site": "Woods Hole",
+  "ref_lat": 41.521,
+  "ref_lon": -70.685,
+  "path": "tidal_stream",
+  "matched_cell_id": "C1609-0080-0036",
+  "distance_mi": 0.49,
+  "resource_percentile": 81.8,
+  "status": "pass",
+  "reason": null
+ },
+ {
+  "site": "Cape Cod Canal/Bourne",
+  "ref_lat": 41.741,
+  "ref_lon": -70.616,
+  "path": "tidal_stream",
+  "matched_cell_id": "C1609-0084-0051",
+  "distance_mi": 0.44,
+  "resource_percentile": 90.9,
+  "status": "pass",
+  "reason": null
+ },
+ {
+  "site": "Boston Harbor approaches",
+  "ref_lat": 42.33,
+  "ref_lon": -70.95,
+  "path": "rise_fall",
+  "matched_cell_id": "C1609-0067-0092",
+  "distance_mi": 0.58,
+  "resource_percentile": 100.0,
+  "status": "pass",
+  "reason": null
+ },
+ {
+  "site": "Cape Cod Bay",
+  "ref_lat": 41.85,
+  "ref_lon": -70.35,
+  "path": "rise_fall",
+  "matched_cell_id": "C1609-0098-0058",
+  "distance_mi": 0.38,
+  "resource_percentile": 91.7,
+  "status": "pass",
+  "reason": null
+ }
+]

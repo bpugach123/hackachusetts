@@ -1,0 +1,60 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+     [
+      [
+       -70.86,
+       41.292986
+      ],
+      [
+       -70.45,
+       41.292986
+      ]
+     ],
+     [
+      [
+       -70.3,
+       41.2
+      ],
+      [
+       -69.95,
+       41.205
+      ]
+     ],
+     [
+      [
+       -69.885,
+       41.48
+      ],
+      [
+       -69.88,
+       41.62
+      ],
+      [
+       -69.875,
+       41.76
+      ],
+      [
+       -69.9,
+       41.9
+      ],
+      [
+       -70.02,
+       42.08
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "citation_id": "marinecadastre-ssl",
+    "disclaimer": "Not legal advice",
+    "name": "MA state/federal 3 nm boundary (schematic sample geometry)"
+   }
+  }
+ ]
+}

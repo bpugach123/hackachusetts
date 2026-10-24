@@ -1,0 +1,33 @@
+{
+  "id": "FEAT-006",
+  "type": "feat",
+  "description": "Perseus UI integration in src/App.jsx (spec 12.1-12.8 adapted per plan.md D5-D12, 13.2 README, checkpoint 14): load public/data/siting.json at startup with simulated fallback, drive the pin report, score, particle field, zoomed dots and heat/policy layers from pipeline data, show provenance/tier chips, gaps, 'Not legal advice', a Model settings popover, and keep everything still simulated labeled. Depends on FEAT-005.",
+  "status": "pending",
+  "steps": [
+    "Read plan.md D5-D12 and sections (b), (d), (e); Perseus steering tech/structure/product; App.jsx L92-570 and the report aside (~L1006-1265). Keep the single class component, inline css() strings, T tokens for both themes (add any new tokens to BOTH dark and light objects).",
+    "Startup (D5): constructor accepts props.siting; componentDidMount fetches './data/siting.json' when not injected, runs isSitingData, stores this.siting + this.idx = buildIndex(...), sets state.dataStatus ('pipeline'|'sample'|'simulated'), then calls this.buildField(). On any failure dataStatus='simulated' and the app runs exactly as before. Show a small badge in the brand area: 'SIMULATED DATA · pipeline output not loaded' or 'SAMPLE DATA' (no badge text beyond that).",
+    "buildField (D9): when this.siting exists, magnitude per 8-unit field cell from nearest cell velocity_peak/max_velocity into the existing 0.12-1.15 range; no pipeline velocity -> mg 0. Direction from CORRIDORS unchanged. Hint text: 'direction schematic · speed from modeled current'.",
+    "Pin branch (plan (b) table): memoize on this.pinKey; look up cell via cellAt; outside grid -> gap. Peak current, power density, yield, revenue, tidal range, wave, policy (exclusions + D11 approximate-zone notes), jurisdiction + straddle + disclaimer, grid distances + utility (contact mapping by name), Conflict/Feasibility/Grid/Resource scores, overall() score with partial/missing, 'Rank N of M modeled cells' via rankRows. Live 'output now' and 'earned since today' keep M2 timing but use the cubic device formula with pipeline device_config and velocity_peak; label 'tide timing simulated (M2)'. Simulated mode keeps today's code path and 50/30/20 score, badge 'DROPPED PIN · SIMULATED'.",
+    "Report UI: tag chips (QUANTIFIED DATA / PROXY / EXTERNAL ADDITION) next to each pipeline value; velocity line shows 'modeled current · {model} · run {date}'; every null shows fmtFactor gap text; Policy tab adds 'Regulatory proxy · Not legal advice'; Grid tab marks landing/cable 'approx. (schematic coastline)'; a closed-by-default <details> 'Sources' listing citations (agency, dataset, endpoint, date, date_kind) for the factors shown; exclusion_check_incomplete and feasibility_omitted shown when non-empty. Keep text lean.",
+    "Layers: when pipeline data is loaded, heat layer img src = './data/siting-heat.svg', policy layer adds './data/siting-policy.svg'; add a '3 nm line' toggle (default OFF) in the layers panel; legend shows 5 bins + 'Data gap'. Zoomed dots use nearest-cell velocity (skip null). Range dots/PNG stay RST, labeled approximate.",
+    "Model popover (D10, 12.7): a 'Model' button near the layers panel opens a compact panel floating over land: 5 weight sliders 0-1 step 0.05 with <label>s, device config values with units, cell size read-only 're-run pipeline to change', inline validateEdit errors, Reset; device edits lazily fetch './data/timeseries.json' and recompute Resource/energy via model/resource.js; also lists metadata known_limitations, gap_summary and validation site statuses. Bump a config version used in this.pinKey.",
+    "Sentiment: if siting.sentiment has the matched cell, show its note under Policy as 'Tier 3 narrative · not scored' with citations; no number. (Data arrives in FEAT-007; code path and test with a fixture now.)",
+    "Tests: test/render.test.mjs bundles src/App.jsx with esbuild (already a devDependency) to a temp ESM file, then (a) instantiates App with props.siting from a fixture built from output/sample via the import script, sets state.pin on water/land/outside-grid/excluded/velocity-gap cells and calls renderVals() for both 'dark' and 'light', asserting pt fields (gap text never '0', disclaimer present, 'modeled current' label, Tier 3 label, partial flag); (b) renderToString(<App siting=... startTheme='light'/>) and dark, asserting no throw; (c) simulated mode with no siting prop; (d) time 100 renderVals() calls with a pin, assert < 2 ms average. These cover 12.2, 12.5, 12.8 adapted.",
+    "Update Perseus README.md (data section, regenerate commands from plan.md (c), what is simulated) and Perseus .kiro/steering/tech.md 'Point model' + 'What is simulated' table to reflect D7/D9. 13.2: write /Users/michaellaschaszberger/Desktop/hackachusetts/README.md per the task (setup, single pipeline command, Perseus as the frontend with its commands, source list with citations from endpoints.py, 'Not legal advice', right whale graded-not-excluded note, known limitations, 'How Kiro was used' with concrete examples).",
+    "Run npm test, data:import on real output, npm run build. Check boxes 12.x, 12, 13.2, 13, checkpoint 14 in tasks.md with Perseus adaptation notes (12.3 MapView -> stage layers, 12.4 RankedTable -> rank line, 12.6 TopFive -> rank + sentiment, 12.7 -> Model popover)."
+  ],
+  "acceptance_criteria": [
+    "`npm test` passes including render.test.mjs for both themes and all three data modes, and the renderVals timing assertion.",
+    "`npm run build` exits 0; dist/ contains data/siting.json and the generated SVGs.",
+    "With data removed (rename public/data temporarily in a test or use the simulated-mode test), the app renders the original schematic report with the SIMULATED badge.",
+    "No new dependencies; App.jsx is still one class component; map unit formulas unchanged.",
+    "Both READMEs and Perseus tech.md updated; tasks.md 12.x, 13.2, 14 checked with notes."
+  ],
+  "verification": [
+    "cd \"/Users/michaellaschaszberger/Downloads/perseus-night-watch 2\" && npm test",
+    "cd \"/Users/michaellaschaszberger/Downloads/perseus-night-watch 2\" && npm run data:import -- /Users/michaellaschaszberger/Desktop/hackachusetts/output && npm run build",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

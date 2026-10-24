@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "boundary_3nm.geojson",
+  "description": "State/federal 3 nm boundary for the map toggle (WGS84). features is empty when the boundary fetch failed. See docs/schema.md.",
+  "type": "object",
+  "required": ["type", "features"],
+  "properties": {
+    "type": { "const": "FeatureCollection" },
+    "features": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/BoundaryFeature" }
+    }
+  },
+  "$defs": {
+    "Position": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": { "type": "number" }
+    },
+    "LineCoords": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/Position" }
+    },
+    "RingCoords": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "$ref": "#/$defs/Position" }
+    },
+    "Geometry": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["type", "coordinates"],
+          "properties": {
+            "type": { "const": "LineString" },
+            "coordinates": { "$ref": "#/$defs/LineCoords" }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["type", "coordinates"],
+          "properties": {
+            "type": { "const": "MultiLineString" },
+            "coordinates": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/LineCoords" } }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["type", "coordinates"],
+          "properties": {
+            "type": { "const": "Polygon" },
+            "coordinates": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/RingCoords" } }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["type", "coordinates"],
+          "properties": {
+            "type": { "const": "MultiPolygon" },
+            "coordinates": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/RingCoords" } }
+            }
+          }
+        }
+      ]
+    },
+    "BoundaryFeature": {
+      "type": "object",
+      "required": ["type", "geometry", "properties"],
+      "properties": {
+        "type": { "const": "Feature" },
+        "geometry": { "$ref": "#/$defs/Geometry" },
+        "properties": {
+          "type": "object",
+          "required": ["citation_id", "disclaimer"],
+          "properties": {
+            "citation_id": { "type": "string", "minLength": 1 },
+            "disclaimer": { "const": "Not legal advice" },
+            "name": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

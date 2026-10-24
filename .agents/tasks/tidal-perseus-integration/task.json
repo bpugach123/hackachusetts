@@ -1,0 +1,7 @@
+{
+  "task_id": "task-tidal-perseus-integration",
+  "task_description": "Execute every remaining task in /Users/michaellaschaszberger/Desktop/hackachusetts/.kiro/specs/ma-tidal-buoy-siting-model/tasks.md in order (CORE required, STRETCH 15-18 cuttable with notes), checking boxes as each finishes, then plug the pipeline's Static_Output into the Perseus React app at '/Users/michaellaschaszberger/Downloads/perseus-night-watch 2' as static JSON, honoring the tidal-siting-data steering rules (cubic power, modeled-current labels, tiers, gaps, citations, not legal advice, sentiment narrative only). Full plan: /Users/michaellaschaszberger/Desktop/hackachusetts/.agents/tasks/tidal-perseus-integration/plan.md",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003", "FEAT-004", "FEAT-005", "FEAT-006", "FEAT-007"],
+  "blocked_reason": null
+}

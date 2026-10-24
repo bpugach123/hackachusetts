@@ -1,0 +1,29 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Validation report, output writer, Python overall, run.py wiring (spec 9.1-9.7), checkpoint 10, and a real end-to-end pipeline run producing /Users/michaellaschaszberger/Desktop/hackachusetts/output. Depends on FEAT-001..003.",
+  "status": "pending",
+  "steps": [
+    "Read tasks.md sections 9-10, design.md Pipeline run order, Validation, Data Models, Error Handling, Properties 6, 9, 28; FEAT-002/003 findings.",
+    "9.1: siting/validation.py per design (5 hard-coded sites from requirements Req 15.1, nearest centroid over ALL cells, > 3 mi -> not evaluated, percentile on path sub-score, pass >= 75). 9.2 property test.",
+    "9.3: siting/score/overall.py overall_default (same formula as design's frontend overall(), default weights, excluded -> 0); siting/output.py writes metadata.json (run timestamp UTC, cell size, every config key with units, dedup citations, gap summary, factors list, tier3 notice, disclaimer, known limitations incl. NECOFS window t_start..t_end), cells.geojson, timeseries.json, boundary_3nm.geojson, validation.json; atomic write via output/.tmp/ then rename; 1 dp rounding at write time. Real-run metadata has `sample: false`.",
+    "9.4: wire run.py end to end with exit codes 2/3/4 and gap summary by source; CLI `python -m siting.run --config ../config/device_config.yaml --out ../output`. Make main() return 0 on success.",
+    "9.5, 9.6, 9.7: tests/test_gap_isolation_props.py (synthetic fixtures + fake transport), tests/test_nonscoring_props.py, tests/test_output.py, tests/test_no_kit.py (no pipeline path references the kit zip).",
+    "Run smoke, then the real run. If wall time is impractical at cell_size_mi 1 (> ~45 min), do NOT silently change config: record timings in findings and call send_message severity 'warning' asking whether to coarsen cell size. Record cell count, gap summary, output sizes in findings.",
+    "Run test_schema.py over the real output; fix schema mismatches (this also covers spec 13.1's 'fix schema mismatches' bullet). Check boxes 9.x, 9, checkpoint 10."
+  ],
+  "acceptance_criteria": [
+    "pytest -q and ruff pass.",
+    "Real run exits 0, prints a gap summary, writes all five files under output/, and test_schema.py validates them.",
+    "provenance.validate returned no errors on the real run (else exit 4 and no write).",
+    "metadata.json lists known_limitations including the NECOFS forecast window, the 'Not legal advice' disclaimer, and the tier3 notice.",
+    "findings records: cell count, gaps by source, file sizes, validation site statuses."
+  ],
+  "verification": [
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/ruff check .",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m siting.run --config ../config/device_config.yaml --out ../output; echo exit=$?"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

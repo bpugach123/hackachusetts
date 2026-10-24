@@ -1,0 +1,30 @@
+{
+  "id": "FEAT-005",
+  "type": "feat",
+  "description": "Perseus data layer + model ports (spec 11.1-11.10, 12.9, 13.1 adapted per plan.md D1-D4): projection module, pure JS model ports, loader with type guards, import script that converts pipeline Static_Output to map-unit static JSON + SVG layers in public/data, node --test suite, cross-language fixture. No UI changes yet. Depends on FEAT-004 output (falls back to output/sample with --allow-sample for tests if needed).",
+  "status": "pending",
+  "steps": [
+    "Read plan.md decisions D1-D8 and sections (b), (c); Perseus .kiro/steering/{tech,structure,product}.md; design.md 'Frontend' + Properties 7, 16, 22-27. Run `npm install` in Perseus once (installs only the existing package.json deps).",
+    "Create src/geo/proj.js exporting MW, MH, KX, SC, LON0, LATT, KMPX, lonLatToMap(lon, lat), mapToLonLat(x, y) using exactly x=(lon+72.30)*445.88, y=(42.92-lat)*600. Change App.jsx only to import these constants instead of redefining them (no behavior change).",
+    "Create src/model/ramps.js (ramp, weightedMeanAvailable), overall.js (DEFAULT_WEIGHTS {resource:.30, profitability:.25, feasibility:.15, grid:.15, conflict:.15}, overall(c, w) -> {score, partial, missing}, excluded -> 0), sort.js (rankRows nulls last, tie cell_id asc; topN), bins.js (binIndex 5 bins + 'gap', radiusPx, VIRIDIS5, GAP_COLOR '#9e9e9e'), resource.js (powerDensity = 0.5*rho*v**3, stream sub-score from stored power density + threshold flags, CF from speeds series, rise/fall sub-score/CF/energy, combineResource), config.js (validateEdit(key, raw): numeric, > 0, Cp and eta <= 1, message names range), format.js (fmtFactor(factor): null -> 'Data gap — {source}: {reason}', never '0'; tagChip(tags)), load.js (isSitingData type guard -> {ok:true,data}|{ok:false,file,field}; buildIndex(cells, cellHalfUnits) 16-unit buckets; cellAt(index, x, y) nearest within half-diagonal or null). All pure ESM, JSDoc-typed, no React.",
+    "Create scripts/import-siting.mjs (no deps): source dir = argv[2] or $SITING_OUTPUT; read metadata.json, cells.geojson, timeseries.json, boundary_3nm.geojson, validation.json, optional sentiment.json; refuse metadata.sample===true unless --allow-sample; validate required fields (clear error naming file + field, exit 1); write public/data/siting.json in the plan.md (c) shape with map-unit x/y via proj.js, max_velocity; copy timeseries.json to public/data/timeseries.json; generate public/data/siting-heat.svg (viewBox 0 0 1605.2 1044, one rect per non-excluded cell colored by binIndex(overall_default), gap gray) and public/data/siting-policy.svg (excluded cells hatched/outlined + 3 nm boundary polyline); copy /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline/tests/fixtures/cross_lang.json to test/fixtures/ when present. Add package.json scripts: \"test\": \"node --test test/\", \"data:import\": \"node scripts/import-siting.mjs\".",
+    "11.10: pipeline/tests/test_cross_lang_fixture.py uses hypothesis to generate ~100 cases (speeds series, tidal range, distances, device config) and writes pipeline/tests/fixtures/cross_lang.json with Python CF, energy, both sub-scores, Resource; Perseus test/crossLang.test.mjs asserts equality within 1e-6.",
+    "Tests in Perseus test/: proj.test.mjs (round trip, extent corners map to 0/0 and ~1605.2/1044), ramps.test.mjs (Property 16), overall.test.mjs (Property 22), sort.test.mjs (Property 24), bins.test.mjs (Property 25), config.test.mjs (Property 26), format.test.mjs (Property 7), load.test.mjs (guard rejects malformed files naming file+field; cellAt hit/miss), import.test.mjs (run the import script on /Users/michaellaschaszberger/Desktop/hackachusetts/output/sample with --allow-sample into a temp dir via an --out flag, assert map-unit conversion and SVG generation), perf.test.mjs (12.9: 5,000 synthetic cells, overall + rankRows < 1000 ms). Seeded PRNG loops of 100 runs replace fast-check.",
+    "Run the import on the real output: `npm run data:import -- /Users/michaellaschaszberger/Desktop/hackachusetts/output`; record siting.json size in findings (target < 5 MB; if larger, drop unused factor fields, round to sensible precision, but never drop provenance).",
+    "Check boxes 11.x, 11, 12.9, 13.1 in tasks.md with '(implemented in Perseus: <file>)' appended."
+  ],
+  "acceptance_criteria": [
+    "`npm test` in Perseus passes all suites including crossLang within 1e-6 and the 5,000-cell benchmark.",
+    "`npm run data:import -- /Users/michaellaschaszberger/Desktop/hackachusetts/output` exits 0 and writes public/data/{siting.json,timeseries.json,siting-heat.svg,siting-policy.svg}.",
+    "`npm run build` exits 0 and dist/data/siting.json exists; the app still behaves as before (no UI change yet).",
+    "No new entries in Perseus package.json dependencies or devDependencies.",
+    "pipeline pytest -q and ruff pass (new cross-lang fixture test)."
+  ],
+  "verification": [
+    "cd \"/Users/michaellaschaszberger/Downloads/perseus-night-watch 2\" && npm test",
+    "cd \"/Users/michaellaschaszberger/Downloads/perseus-night-watch 2\" && npm run data:import -- /Users/michaellaschaszberger/Desktop/hackachusetts/output && npm run build",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q && .venv/bin/ruff check ."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,3533 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": "C1609-0095-0024",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.399938,
+       41.350607
+      ],
+      [
+       -70.380705,
+       41.350839
+      ],
+      [
+       -70.381012,
+       41.365331
+      ],
+      [
+       -70.400249,
+       41.365099
+      ],
+      [
+       -70.399938,
+       41.350607
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0095-0024",
+    "i": 95,
+    "j": 24,
+    "centroid_lat": 41.357969,
+    "centroid_lon": -70.390476,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 96.2,
+     "feasibility": 66.7,
+     "grid": 51.6,
+     "conflict": 17.5,
+     "tidal_stream_sub": 96.2,
+     "rise_fall_sub": 0,
+     "profitability": 91.4
+    },
+    "overall_default": 66.8,
+    "factors": {
+     "velocity_peak": {
+      "value": 2.45,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM GOM3 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 7536.9,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 7.77,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "cf_stream": {
+      "value": 0.1921,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 168300.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "depth": {
+      "value": 18.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "tidal_range": {
+      "value": 0.65,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8448558"
+     },
+     "coops_station": {
+      "value": "8448558",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Edgartown, 10.7 km"
+     },
+     "energy_cycle_j": {
+      "value": 106209.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "tidal range at or below minimum"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 14.2,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 15.9,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 30,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 40,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 8.5,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 53.48,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 44448.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: tidal_stream"
+     },
+     "m_transport": {
+      "value": 1.5348,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.142,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.5939,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -11427.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0080-0036",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.692908,
+       41.520615
+      ],
+      [
+       -70.673628,
+       41.520897
+      ],
+      [
+       -70.674001,
+       41.535387
+      ],
+      [
+       -70.693286,
+       41.535104
+      ],
+      [
+       -70.692908,
+       41.520615
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0080-0036",
+    "i": 80,
+    "j": 36,
+    "centroid_lat": 41.528001,
+    "centroid_lon": -70.683456,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 71.3,
+     "feasibility": 79.4,
+     "grid": 95.0,
+     "conflict": 43.0,
+     "tidal_stream_sub": 71.3,
+     "rise_fall_sub": 0,
+     "profitability": 100.0
+    },
+    "overall_default": 66.1,
+    "factors": {
+     "velocity_peak": {
+      "value": 2.05,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM MassBay 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 4415.3,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 2.59,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "cf_stream": {
+      "value": 0.1148,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 100541.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "depth": {
+      "value": 12.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "tidal_range": {
+      "value": 0.546,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447930"
+     },
+     "coops_station": {
+      "value": "8447930",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Woods Hole, 1.1 km"
+     },
+     "energy_cycle_j": {
+      "value": 74941.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "tidal range at or below minimum"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 2.1,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 2.8,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 85,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 55,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 3.4,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 22.71,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 26553.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: tidal_stream"
+     },
+     "m_transport": {
+      "value": 1.2271,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.021,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.2862,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -5677.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0084-0051",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.621224,
+       41.739074
+      ],
+      [
+       -70.601878,
+       41.739345
+      ],
+      [
+       -70.602238,
+       41.753835
+      ],
+      [
+       -70.621589,
+       41.753564
+      ],
+      [
+       -70.621224,
+       41.739074
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0084-0051",
+    "i": 84,
+    "j": 51,
+    "centroid_lat": 41.746455,
+    "centroid_lon": -70.611732,
+    "hard_exclusion": true,
+    "exclusion_layers": [
+     "shipping_lanes"
+    ],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 85.8,
+     "feasibility": 67.8,
+     "grid": 99.3,
+     "conflict": 52.0,
+     "tidal_stream_sub": 85.8,
+     "rise_fall_sub": 1.1
+    },
+    "overall_default": 0,
+    "factors": {
+     "velocity_peak": {
+      "value": 2.3,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM MassBay 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 6235.6,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 5.18,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "cf_stream": {
+      "value": 0.1612,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 141206.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "depth": {
+      "value": 10.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "tidal_range": {
+      "value": 1.044,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447270"
+     },
+     "coops_station": {
+      "value": "8447270",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Buzzards Bay, 0.7 km"
+     },
+     "energy_cycle_j": {
+      "value": 273989.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "cf_rise_fall": {
+      "value": 1.8e-05,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "eta 0.3, 705.8 cycles/yr, 0.0761 kWh/cycle"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 16.1,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "wave_power": {
+      "value": 1.07,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44090, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.74,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44090, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 0.6,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 1.4,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 97,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 35,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 1.2,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 28.69,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0067-0092",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.968307,
+       42.327899
+      ],
+      [
+       -70.948785,
+       42.328232
+      ],
+      [
+       -70.949232,
+       42.342718
+      ],
+      [
+       -70.968759,
+       42.342384
+      ],
+      [
+       -70.968307,
+       42.327899
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0067-0092",
+    "i": 67,
+    "j": 92,
+    "centroid_lat": 42.335309,
+    "centroid_lon": -70.958771,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "rise_fall",
+    "scores": {
+     "resource": 82.7,
+     "feasibility": 97.1,
+     "grid": 90.2,
+     "conflict": 65.0,
+     "tidal_stream_sub": 0.0,
+     "rise_fall_sub": 82.7,
+     "profitability": 69.2
+    },
+    "overall_default": 60.5,
+    "factors": {
+     "velocity_peak": {
+      "value": 0.55,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM MassBay 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 85.3,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 0.0,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "energy_stream_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "note": "below EPRI thresholds"
+     },
+     "depth": {
+      "value": 15.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "tidal_range": {
+      "value": 2.759,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8444162"
+     },
+     "coops_station": {
+      "value": "8444162",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Boston Light, 5.6 km"
+     },
+     "energy_cycle_j": {
+      "value": 1913534.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "cf_rise_fall": {
+      "value": 0.000128,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "eta 0.3, 705.8 cycles/yr, 0.5315 kWh/cycle"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 112.5,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "wave_power": {
+      "value": 4.33,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44013, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 1.18,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44013, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 3.2,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 4.5,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 92,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 50,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 4.1,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 100,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 7.03,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: Boston"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 30.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: rise_fall"
+     },
+     "m_transport": {
+      "value": 1.0703,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.032,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.1879,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -26213.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [
+     "power_density",
+     "area"
+    ],
+    "energy_reason": "below EPRI thresholds",
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0098-0058",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.35249,
+       41.844016
+      ],
+      [
+       -70.33311,
+       41.844243
+      ],
+      [
+       -70.333411,
+       41.858734
+      ],
+      [
+       -70.352795,
+       41.858508
+      ],
+      [
+       -70.35249,
+       41.844016
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0098-0058",
+    "i": 98,
+    "j": 58,
+    "centroid_lat": 41.851376,
+    "centroid_lon": -70.342951,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "rise_fall",
+    "scores": {
+     "resource": 76.1,
+     "feasibility": 33.3,
+     "grid": 59.7,
+     "conflict": 50.0,
+     "tidal_stream_sub": 0.0,
+     "rise_fall_sub": 76.1,
+     "profitability": 25.5
+    },
+    "overall_default": 35.7,
+    "factors": {
+     "velocity_peak": {
+      "value": 0.3,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM MassBay 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 13.8,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 0.0,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "energy_stream_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "note": "below EPRI thresholds"
+     },
+     "depth": {
+      "value": 25.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "tidal_range": {
+      "value": 2.663,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447180"
+     },
+     "coops_station": {
+      "value": "8447180",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Sandwich, 16.2 km"
+     },
+     "energy_cycle_j": {
+      "value": 1782687.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "cf_rise_fall": {
+      "value": 0.00012,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "eta 0.3, 705.8 cycles/yr, 0.4952 kWh/cycle"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 104.9,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "wave_power": {
+      "value": 1.07,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44090, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.74,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44090, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 11.8,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 13.6,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 40,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 60,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 6.5,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 100,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 53.83,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 28.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: rise_fall"
+     },
+     "m_transport": {
+      "value": 1.5383,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.118,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.6119,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -55416.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [
+     "power_density",
+     "area"
+    ],
+    "energy_reason": "below EPRI thresholds",
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0083-0020",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.629263,
+       41.289605
+      ],
+      [
+       -70.610051,
+       41.289875
+      ],
+      [
+       -70.610408,
+       41.304366
+      ],
+      [
+       -70.629624,
+       41.304096
+      ],
+      [
+       -70.629263,
+       41.289605
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0083-0020",
+    "i": 83,
+    "j": 20,
+    "centroid_lat": 41.296986,
+    "centroid_lon": -70.619837,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": true,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 0.0,
+     "feasibility": 71.1,
+     "grid": 70.2,
+     "conflict": 26.2,
+     "tidal_stream_sub": 0.0,
+     "rise_fall_sub": 0,
+     "profitability": 37.4
+    },
+    "overall_default": 26.6,
+    "factors": {
+     "velocity_peak": {
+      "value": 0.8,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM GOM3 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 262.4,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 0.0,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "energy_stream_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "note": "below EPRI thresholds"
+     },
+     "depth": {
+      "value": 20.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "tidal_range": {
+      "value": 0.847,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8448875"
+     },
+     "coops_station": {
+      "value": "8448875",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Martha'S Vineyard Gps Buoy, 4.1 km"
+     },
+     "energy_cycle_j": {
+      "value": 180343.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "tidal range at or below minimum"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 8.9,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 10.4,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 35,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 70,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 9.0,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 44.69,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 0.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: tidal_stream"
+     },
+     "m_transport": {
+      "value": 1.4469,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.089,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.506,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -47460.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [
+     "power_density",
+     "area"
+    ],
+    "energy_reason": "below EPRI thresholds",
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0120-0046",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -69.92359,
+       41.674324
+      ],
+      [
+       -69.904259,
+       41.674478
+      ],
+      [
+       -69.904462,
+       41.688972
+      ],
+      [
+       -69.923798,
+       41.688818
+      ],
+      [
+       -69.92359,
+       41.674324
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0120-0046",
+    "i": 120,
+    "j": 46,
+    "centroid_lat": 41.681648,
+    "centroid_lon": -69.914027,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "rise_fall",
+    "scores": {
+     "resource": 12.5,
+     "feasibility": 66.7,
+     "grid": 87.8,
+     "conflict": 49.5,
+     "tidal_stream_sub": null,
+     "rise_fall_sub": 12.5,
+     "profitability": 0.0
+    },
+    "overall_default": 19.5,
+    "factors": {
+     "velocity_peak": {
+      "value": null,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current",
+      "gap": {
+       "factor": "velocity_peak",
+       "source": "NECOFS FVCOM",
+       "reason": "no coverage",
+       "detail": "no velocity source in priority order returned data"
+      }
+     },
+     "velocity_source_period": {
+      "value": null,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current",
+      "gap": {
+       "factor": "velocity_source_period",
+       "source": "NECOFS FVCOM",
+       "reason": "no coverage",
+       "detail": "no velocity source in priority order returned data"
+      }
+     },
+     "power_density": {
+      "value": null,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "gap": {
+       "factor": "power_density",
+       "source": "NECOFS FVCOM",
+       "reason": "no coverage",
+       "detail": "no velocity source in priority order returned data"
+      }
+     },
+     "qualifying_area": {
+      "value": null,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "gap": {
+       "factor": "qualifying_area",
+       "source": "NECOFS FVCOM",
+       "reason": "no coverage",
+       "detail": "no velocity source in priority order returned data"
+      }
+     },
+     "cf_stream": {
+      "value": null,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "gap": {
+       "factor": "cf_stream",
+       "source": "NECOFS FVCOM",
+       "reason": "no coverage",
+       "detail": "no velocity source in priority order returned data"
+      }
+     },
+     "energy_stream_kwh": {
+      "value": null,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "gap": {
+       "factor": "energy_stream_kwh",
+       "source": "NECOFS FVCOM",
+       "reason": "no coverage",
+       "detail": "no velocity source in priority order returned data"
+      }
+     },
+     "depth": {
+      "value": 8.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "ncei-crm",
+      "note": "NECOFS h unavailable; CRM fallback"
+     },
+     "tidal_range": {
+      "value": 1.414,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447435"
+     },
+     "coops_station": {
+      "value": "8447435",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Chatham, 3.2 km"
+     },
+     "energy_cycle_j": {
+      "value": 502611.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "cf_rise_fall": {
+      "value": 3.4e-05,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "eta 0.3, 705.8 cycles/yr, 0.1396 kWh/cycle"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 29.6,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 3.9,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 5.2,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 25,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 65,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 4.6,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 100,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 83.77,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 8.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: rise_fall"
+     },
+     "m_transport": {
+      "value": 1.8377,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.039,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.8968,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -72427.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": [
+     {
+      "factor": "velocity_peak",
+      "source": "NECOFS FVCOM",
+      "reason": "no coverage",
+      "detail": "no wet model element at centroid"
+     },
+     {
+      "factor": "velocity_peak",
+      "source": "Doppio",
+      "reason": "no coverage",
+      "detail": "no wet model element at centroid"
+     },
+     {
+      "factor": "velocity_peak",
+      "source": "MOM6",
+      "reason": "no coverage",
+      "detail": "no wet model element at centroid"
+     },
+     {
+      "factor": "velocity_peak",
+      "source": "NOAA CO-OPS current predictions",
+      "reason": "no coverage",
+      "detail": "no current station within 5 km"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0076-0031",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.768054,
+       41.447007
+      ],
+      [
+       -70.748796,
+       41.447302
+      ],
+      [
+       -70.749186,
+       41.461791
+      ],
+      [
+       -70.768448,
+       41.461497
+      ],
+      [
+       -70.768054,
+       41.447007
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0076-0031",
+    "i": 76,
+    "j": 31,
+    "centroid_lat": 41.4544,
+    "centroid_lon": -70.758621,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 56.1,
+     "feasibility": 88.6,
+     "grid": 84.7,
+     "conflict": 31.2,
+     "tidal_stream_sub": 56.1,
+     "rise_fall_sub": 0
+    },
+    "overall_default": 56.0,
+    "factors": {
+     "velocity_peak": {
+      "value": 1.7,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM MassBay 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 2517.9,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 10.36,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "cf_stream": {
+      "value": 0.0651,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 57009.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "depth": {
+      "value": 22.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "tidal_range": {
+      "value": 0.546,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447930"
+     },
+     "coops_station": {
+      "value": "8447930",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Woods Hole, 10.6 km"
+     },
+     "energy_cycle_j": {
+      "value": 74941.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "tidal range at or below minimum"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 4.6,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 6.3,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 80,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 45,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 5.8,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 23.7,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0124-0036",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -69.844371,
+       41.529977
+      ],
+      [
+       -69.825082,
+       41.530117
+      ],
+      [
+       -69.825266,
+       41.544611
+      ],
+      [
+       -69.84456,
+       41.544471
+      ],
+      [
+       -69.844371,
+       41.529977
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0124-0036",
+    "i": 124,
+    "j": 36,
+    "centroid_lat": 41.537294,
+    "centroid_lon": -69.83482,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "federal",
+    "agency": "BOEM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 66.4,
+     "feasibility": 56.7,
+     "grid": 57.2,
+     "conflict": 58.8,
+     "tidal_stream_sub": 66.4,
+     "rise_fall_sub": 5.6,
+     "profitability": 15.7
+    },
+    "overall_default": 32.1,
+    "factors": {
+     "velocity_peak": {
+      "value": 1.95,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM GOM3 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 3800.1,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 5.18,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "cf_stream": {
+      "value": 0.0982,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 86021.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "depth": {
+      "value": 12.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "tidal_range": {
+      "value": 1.203,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447505"
+     },
+     "coops_station": {
+      "value": "8447505",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Chatham, Stage Harbor, 18.1 km"
+     },
+     "energy_cycle_j": {
+      "value": 363801.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "cf_rise_fall": {
+      "value": 2.4e-05,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "eta 0.3, 705.8 cycles/yr, 0.1011 kWh/cycle"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 21.4,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 12.7,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 14.1,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 60,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 75,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 10.2,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 100,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 90.84,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 22718.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: tidal_stream"
+     },
+     "m_transport": {
+      "value": 1.9084,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.127,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.9675,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -61916.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0071-0041",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.868501,
+       41.59037
+      ],
+      [
+       -70.849202,
+       41.590682
+      ],
+      [
+       -70.849615,
+       41.605171
+      ],
+      [
+       -70.868919,
+       41.604858
+      ],
+      [
+       -70.868501,
+       41.59037
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0071-0041",
+    "i": 71,
+    "j": 41,
+    "centroid_lat": 41.597771,
+    "centroid_lon": -70.859059,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "rise_fall",
+    "scores": {
+     "resource": 2.2,
+     "feasibility": 100.0,
+     "grid": 94.1,
+     "conflict": 37.8,
+     "tidal_stream_sub": 0.0,
+     "rise_fall_sub": 2.2,
+     "profitability": 72.0
+    },
+    "overall_default": 42.1,
+    "factors": {
+     "velocity_peak": {
+      "value": 0.6,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM MassBay 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 110.7,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 0.0,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "energy_stream_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay",
+      "note": "below EPRI thresholds"
+     },
+     "depth": {
+      "value": 12.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-massbay"
+     },
+     "tidal_range": {
+      "value": 1.086,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447712"
+     },
+     "coops_station": {
+      "value": "8447712",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "New Bedford, Clarks Point, 3.4 km"
+     },
+     "energy_cycle_j": {
+      "value": 296478.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "cf_rise_fall": {
+      "value": 2e-05,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "eta 0.3, 705.8 cycles/yr, 0.0824 kWh/cycle"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 17.4,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 2.4,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 3.0,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 55,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 50,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 2.7,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 6.21,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 5.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: rise_fall"
+     },
+     "m_transport": {
+      "value": 1.0621,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.024,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.1212,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -24384.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [
+     "power_density",
+     "area"
+    ],
+    "energy_reason": "below EPRI thresholds",
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0111-0028",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.093165,
+       41.411914
+      ],
+      [
+       -70.073912,
+       41.412095
+      ],
+      [
+       -70.074151,
+       41.426589
+      ],
+      [
+       -70.093408,
+       41.426408
+      ],
+      [
+       -70.093165,
+       41.411914
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0111-0028",
+    "i": 111,
+    "j": 28,
+    "centroid_lat": 41.419252,
+    "centroid_lon": -70.083659,
+    "hard_exclusion": false,
+    "exclusion_layers": [],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 49.8,
+     "feasibility": 63.3,
+     "grid": 43.6,
+     "conflict": 25.0,
+     "tidal_stream_sub": 49.8,
+     "rise_fall_sub": 0,
+     "profitability": 15.6
+    },
+    "overall_default": 31.1,
+    "factors": {
+     "velocity_peak": {
+      "value": 1.5,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM GOM3 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 1729.7,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 2.59,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "cf_stream": {
+      "value": 0.0452,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 39605.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "depth": {
+      "value": 14.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "tidal_range": {
+      "value": 0.925,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8449130"
+     },
+     "coops_station": {
+      "value": "8449130",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Nantucket Island, 15.0 km"
+     },
+     "energy_cycle_j": {
+      "value": 215088.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "tidal range at or below minimum"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 16.5,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 18.2,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 45,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 55,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 7.4,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 73.46,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     },
+     "price_usd_kwh": {
+      "value": 0.2641,
+      "unit": "USD/kWh",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "MA all sectors, 12-month average"
+     },
+     "gross_usd": {
+      "value": 10460.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail",
+      "note": "device path: tidal_stream"
+     },
+     "m_transport": {
+      "value": 1.7346,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "bts-ports"
+     },
+     "m_transmission": {
+      "value": 1.165,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "m_maint": {
+      "value": 1.7937,
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "port distance + mean Hs"
+     },
+     "net_usd": {
+      "value": -62036.0,
+      "unit": "USD/yr",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "eia-retail"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "C1609-0100-0040",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.308428,
+       41.583615
+      ],
+      [
+       -70.289126,
+       41.583833
+      ],
+      [
+       -70.289414,
+       41.598325
+      ],
+      [
+       -70.308721,
+       41.598107
+      ],
+      [
+       -70.308428,
+       41.583615
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "cell_id": "C1609-0100-0040",
+    "i": 100,
+    "j": 40,
+    "centroid_lat": 41.59097,
+    "centroid_lon": -70.298922,
+    "hard_exclusion": true,
+    "exclusion_layers": [
+     "cable_areas"
+    ],
+    "exclusion_check_incomplete": [],
+    "jurisdiction": "state",
+    "agency": "MA CZM",
+    "straddles_boundary": false,
+    "disclaimer": "Not legal advice",
+    "resource_path": "tidal_stream",
+    "scores": {
+     "resource": 41.5,
+     "feasibility": 46.7,
+     "grid": 93.3,
+     "conflict": 34.2,
+     "tidal_stream_sub": 41.5,
+     "rise_fall_sub": 0
+    },
+    "overall_default": 0,
+    "factors": {
+     "velocity_peak": {
+      "value": 1.1,
+      "unit": "m/s",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "velocity_source_period": {
+      "value": "NECOFS FVCOM GOM3 2026-10-23..2026-10-28",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "power_density": {
+      "value": 682.1,
+      "unit": "W/m²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "label": "modeled current"
+     },
+     "qualifying_area": {
+      "value": 2.59,
+      "unit": "km²",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "cf_stream": {
+      "value": 0.0175,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3",
+      "note": "Cp 0.4, swept area 19.635 m², rho 1025 kg/m³, 2026-10-23..2026-10-28"
+     },
+     "energy_stream_kwh": {
+      "value": 15296.0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "depth": {
+      "value": 9.0,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "necofs-gom3"
+     },
+     "tidal_range": {
+      "value": 0.974,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "MN at 8447605"
+     },
+     "coops_station": {
+      "value": "8447605",
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-harcon",
+      "note": "Hyannisport, 4.5 km"
+     },
+     "energy_cycle_j": {
+      "value": 238479.0,
+      "unit": "J",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums"
+     },
+     "energy_rise_fall_kwh": {
+      "value": 0,
+      "unit": "kWh/yr",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "coops-datums",
+      "note": "tidal range at or below minimum"
+     },
+     "wave_power": {
+      "value": 0.65,
+      "unit": "kW/m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "not blended; buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "wave_hs_mean": {
+      "value": 0.59,
+      "unit": "m",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "ndbc-realtime2",
+      "note": "buoy 44020, 2026-09-09..2026-10-24"
+     },
+     "dist_transmission_km": {
+      "value": 2.6,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-transmission"
+     },
+     "dist_substation_km": {
+      "value": 3.3,
+      "unit": "km",
+      "tags": [
+       "QUANTIFIED DATA"
+      ],
+      "citation_id": "hifld-substations"
+     },
+     "utility": {
+      "value": "NSTAR Electric d/b/a Eversource Energy",
+      "unit": null,
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "massgis-utility",
+      "label": "distribution interconnection below 5 MW"
+     },
+     "vessel_traffic": {
+      "value": 70,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-vessel"
+     },
+     "fishing_activity": {
+      "value": 45,
+      "unit": "percentile",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "emolt"
+     },
+     "diadromous_fish_km": {
+      "value": 3.9,
+      "unit": "km",
+      "tags": [
+       "PROXY"
+      ],
+      "citation_id": "neodp-diadromous"
+     },
+     "whale_critical_habitat": {
+      "value": 0,
+      "unit": null,
+      "tags": [
+       "QUANTIFIED DATA",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "nmfs-narw-ch",
+      "note": "graded conflict, not a hard exclusion"
+     },
+     "port_km": {
+      "value": 51.82,
+      "unit": "km",
+      "tags": [
+       "PROXY",
+       "EXTERNAL ADDITION"
+      ],
+      "citation_id": "bts-ports",
+      "note": "nearest principal port: New Bedford"
+     }
+    },
+    "feasibility_omitted": [
+     "slope"
+    ],
+    "stream_threshold_failed": [],
+    "energy_reason": null,
+    "gaps": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siting"
+version = "0.1.0"
+description = "MA tidal buoy siting model: batch pipeline that writes Static_Output for the frontend"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "geopandas==1.2.0",
+    "shapely==2.2.0",
+    "xarray==2026.9.0",
+    "netCDF4==1.7.5.1.post1",
+    "requests==2.34.2",
+    "pyyaml==6.0.3",
+    "jsonschema==4.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "hypothesis==6.170.9",
+    "ruff==0.16.6",
+]
+
+[project.scripts]
+siting-run = "siting.run:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["siting*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]

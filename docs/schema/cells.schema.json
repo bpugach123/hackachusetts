@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "cells.geojson",
+  "description": "GeoJSON FeatureCollection with one Polygon Feature per Cell. Feature properties are a CellRecord. See docs/schema.md.",
+  "type": "object",
+  "required": ["type", "features"],
+  "properties": {
+    "type": { "const": "FeatureCollection" },
+    "features": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/CellFeature" }
+    }
+  },
+  "$defs": {
+    "CellId": {
+      "type": "string",
+      "pattern": "^C[0-9]+-[0-9]{4,}-[0-9]{4,}$",
+      "description": "C{cell_size_m:.0f}-{i:04d}-{j:04d}; deterministic for a given Cell_Size."
+    },
+    "Score": {
+      "description": "0-100, rounded to 1 dp, or null (Data_Gap / not computable).",
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "Position": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": { "type": "number" },
+      "description": "[lon, lat] in WGS84 decimal degrees."
+    },
+    "LinearRing": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "$ref": "#/$defs/Position" }
+    },
+    "Polygon": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": { "const": "Polygon" },
+        "coordinates": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/LinearRing" }
+        }
+      }
+    },
+    "CellFeature": {
+      "type": "object",
+      "required": ["type", "geometry", "properties"],
+      "properties": {
+        "type": { "const": "Feature" },
+        "id": { "$ref": "#/$defs/CellId" },
+        "geometry": { "$ref": "#/$defs/Polygon" },
+        "properties": { "$ref": "#/$defs/CellRecord" }
+      }
+    },
+    "Tags": {
+      "description": "Exactly one primary tag (QUANTIFIED DATA or PROXY), optionally plus EXTERNAL ADDITION.",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": { "enum": ["QUANTIFIED DATA", "PROXY", "EXTERNAL ADDITION"] },
+      "contains": { "enum": ["QUANTIFIED DATA", "PROXY"] },
+      "minContains": 1,
+      "maxContains": 1
+    },
+    "DataGap": {
+      "type": "object",
+      "required": ["factor", "source", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "factor": { "type": "string", "minLength": 1 },
+        "source": { "type": "string", "minLength": 1 },
+        "reason": { "enum": ["fetch failure", "empty response", "no coverage"] },
+        "detail": { "type": "string" }
+      }
+    },
+    "Factor": {
+      "type": "object",
+      "required": ["value", "unit", "tags", "citation_id"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": ["number", "string", "null"] },
+        "unit": { "type": ["string", "null"] },
+        "tags": { "$ref": "#/$defs/Tags" },
+        "citation_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Must match an id in metadata.json citations[]."
+        },
+        "label": { "type": "string" },
+        "note": { "type": "string" },
+        "gap": { "$ref": "#/$defs/DataGap" }
+      },
+      "if": { "properties": { "value": { "type": "null" } } },
+      "then": { "required": ["gap"] },
+      "else": { "not": { "required": ["gap"] } }
+    },
+    "VelocityFactor": {
+      "description": "velocity_* factors are labeled 'modeled current' (NECOFS FVCOM / Doppio / MOM6) or 'predicted current (harmonic)' (NOAA CO-OPS predictions).",
+      "$ref": "#/$defs/Factor",
+      "required": ["label"],
+      "properties": {
+        "label": { "enum": ["modeled current", "predicted current (harmonic)"] }
+      }
+    },
+    "FactorKey": {
+      "enum": [
+        "velocity_peak",
+        "velocity_source_period",
+        "power_density",
+        "depth",
+        "qualifying_area",
+        "cf_stream",
+        "energy_stream_kwh",
+        "tidal_range",
+        "coops_station",
+        "energy_cycle_j",
+        "cf_rise_fall",
+        "energy_rise_fall_kwh",
+        "wave_power",
+        "wave_hs_mean",
+        "dist_transmission_km",
+        "dist_substation_km",
+        "utility",
+        "vessel_traffic",
+        "fishing_activity",
+        "diadromous_fish_km",
+        "whale_critical_habitat",
+        "slope_deg",
+        "port_km",
+        "price_usd_kwh",
+        "gross_usd",
+        "m_transport",
+        "m_transmission",
+        "m_maint",
+        "net_usd"
+      ]
+    },
+    "Scores": {
+      "type": "object",
+      "required": ["resource", "feasibility", "grid", "conflict", "tidal_stream_sub", "rise_fall_sub"],
+      "additionalProperties": false,
+      "properties": {
+        "resource": { "$ref": "#/$defs/Score" },
+        "profitability": {
+          "$ref": "#/$defs/Score",
+          "description": "Stretch. Absent when Profitability was not computed in this run."
+        },
+        "feasibility": { "$ref": "#/$defs/Score" },
+        "grid": { "$ref": "#/$defs/Score" },
+        "conflict": { "$ref": "#/$defs/Score" },
+        "tidal_stream_sub": { "$ref": "#/$defs/Score" },
+        "rise_fall_sub": { "$ref": "#/$defs/Score" }
+      }
+    },
+    "CellRecord": {
+      "type": "object",
+      "required": [
+        "cell_id",
+        "i",
+        "j",
+        "centroid_lat",
+        "centroid_lon",
+        "hard_exclusion",
+        "exclusion_layers",
+        "exclusion_check_incomplete",
+        "jurisdiction",
+        "agency",
+        "straddles_boundary",
+        "disclaimer",
+        "resource_path",
+        "scores",
+        "overall_default",
+        "factors",
+        "feasibility_omitted",
+        "stream_threshold_failed",
+        "energy_reason",
+        "gaps"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cell_id": { "$ref": "#/$defs/CellId" },
+        "i": { "type": "integer", "minimum": 0 },
+        "j": { "type": "integer", "minimum": 0 },
+        "centroid_lat": { "type": "number", "minimum": -90, "maximum": 90 },
+        "centroid_lon": { "type": "number", "minimum": -180, "maximum": 180 },
+        "hard_exclusion": { "type": "boolean" },
+        "exclusion_layers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "exclusion_check_incomplete": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "jurisdiction": { "enum": ["state", "federal", null] },
+        "agency": { "enum": ["MA CZM", "BOEM", null] },
+        "straddles_boundary": { "type": "boolean" },
+        "disclaimer": { "const": "Not legal advice" },
+        "resource_path": { "enum": ["tidal_stream", "rise_fall", null] },
+        "scores": { "$ref": "#/$defs/Scores" },
+        "overall_default": { "type": "number", "minimum": 0, "maximum": 100 },
+        "factors": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/FactorKey" },
+          "properties": {
+            "velocity_peak": { "$ref": "#/$defs/VelocityFactor" },
+            "velocity_source_period": { "$ref": "#/$defs/VelocityFactor" }
+          },
+          "additionalProperties": { "$ref": "#/$defs/Factor" }
+        },
+        "feasibility_omitted": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["depth", "slope", "wave_exposure", "port_distance"] }
+        },
+        "stream_threshold_failed": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["power_density", "depth", "area"] }
+        },
+        "energy_reason": { "type": ["string", "null"] },
+        "gaps": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/DataGap" }
+        }
+      },
+      "allOf": [
+        {
+          "description": "jurisdiction/agency pairing: state <=> MA CZM, federal <=> BOEM, null <=> null",
+          "oneOf": [
+            { "properties": { "jurisdiction": { "const": "state" }, "agency": { "const": "MA CZM" } } },
+            { "properties": { "jurisdiction": { "const": "federal" }, "agency": { "const": "BOEM" } } },
+            { "properties": { "jurisdiction": { "const": null }, "agency": { "const": null } } }
+          ]
+        },
+        {
+          "description": "hard_exclusion <=> exclusion_layers non-empty; excluded cells have overall_default 0",
+          "if": { "properties": { "hard_exclusion": { "const": true } } },
+          "then": {
+            "properties": {
+              "exclusion_layers": { "minItems": 1 },
+              "overall_default": { "const": 0 }
+            }
+          },
+          "else": { "properties": { "exclusion_layers": { "maxItems": 0 } } }
+        }
+      ]
+    }
+  }
+}

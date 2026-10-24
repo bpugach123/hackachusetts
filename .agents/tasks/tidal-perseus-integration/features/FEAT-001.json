@@ -1,0 +1,31 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Pipeline foundations: finish spec tasks 1.4, 1.5, 1.6, verify-and-complete 2.1-2.7 and 3.1-3.3 (code for 2.1/2.3/2.6/3.1 already exists but is unchecked; fetch layer has no tests), build the land-masked grid 4.1-4.4, and pass checkpoint 5. Everything else depends on this.",
+  "status": "pending",
+  "steps": [
+    "Read tasks.md sections 1-5, design.md (Config, Grid, Fetch layer, Provenance, Live endpoints, Properties 1-5, 8, 16, 17) and docs/schema.md. Do not rewrite working modules; diff each existing module against its task text and fill gaps only.",
+    "1.4: create pipeline/siting/sources/smoke.py (`python -m siting.sources.smoke`): for every Endpoint in sources/endpoints.py issue one tiny-bbox GET through FetchClient (or a plain HEAD/GET for THREDDS .das) and print `OK|GAP <name> <url> <reason>`. Resolve each resolve_at_build_start endpoint by querying the ArcGIS REST service directory (?f=json) of the listed host; write the resolved final layer URL (or the fallback / an explicit 'unresolved -> gap' note) back into endpoints.py. Never invent a URL; unresolved stays a gap.",
+    "1.5: hand-build /Users/michaellaschaszberger/Desktop/hackachusetts/output/sample/{metadata.json,cells.geojson,timeseries.json,boundary_3nm.geojson,validation.json} with 12 cells: 2 hard-exclusion, 1 velocity Data_Gap, 1 straddling, both resource paths, one profitability-absent. Add `\"sample\": true` to metadata.json (add an optional boolean `sample` to docs/schema/metadata.schema.json and docs/schema.md). Citations must name real agencies/datasets/endpoints from endpoints.py; values are illustrative and metadata.known_limitations must say 'hand-built sample, not a model run'.",
+    "1.6: pipeline/tests/test_schema.py validates every file in output/sample/ and, when present, output/ against docs/schema/*.schema.json with jsonschema.",
+    "2.1/2.3/2.6: confirm config.py, score/ramps.py, provenance.py meet every bullet of their tasks (ConfigError(param, accepted_range), descending ramps, kit-equivalent registry, 'modeled current' rule, NOAA predictions exception, value None <=> gap). Fix gaps. Then add property tests 2.2 tests/test_config_props.py, 2.4 tests/test_ramp_props.py, 2.5 tests/test_weighted_mean_props.py, 2.7 tests/test_provenance_props.py (hypothesis, max_examples=100, docstring tag 'Feature: ma-tidal-buoy-siting-model, Property N: title').",
+    "3.1: confirm fetch/client.py, cache.py, gaps.py meet the task (sha256 key, .bin + .meta.json, parse-failure eviction, 60 s timeout, 3 attempts 2 s/4 s backoff, OPeNDAP through same wrapper with netCDF-bytes caching, GapRegistry.add/summary). Add tests/test_fetch.py unit tests with a fake transport and tmp cache dir, then 3.2 tests/test_cache_props.py and 3.3 tests/test_retry_props.py.",
+    "4.1: sources/census.py fetches cb_2023_us_state_500k.zip through the fetch layer (STATEFP 25, 33, 44), raising FatalSourceError(source, reason) when there is no cache and the fetch fails. siting/grid.py build(cfg, shoreline) per design: EPSG:26919, origin (230000, 4540000), cell_id f'C{s_m:.0f}-{i:04d}-{j:04d}', outer-extent buffer, NH/RI meridian clip, centroid-in-water filter, lat/lon 6 dp, output in 4326. Use shapely/geopandas/pyproj only (no scipy).",
+    "4.2-4.4: tests/test_grid_props.py, tests/test_land_mask_props.py (synthetic shorelines), tests/test_grid_failure.py.",
+    "Check each finished task's box in /Users/michaellaschaszberger/Desktop/hackachusetts/.kiro/specs/ma-tidal-buoy-siting-model/tasks.md right after its tests pass (including parent boxes 1, 2, 3, 4 when all children are done, and checkpoint 5)."
+  ],
+  "acceptance_criteria": [
+    "`.venv/bin/python -m pytest -q` passes with the new tests (config/ramp/weighted-mean/provenance/cache/retry/grid/land-mask/grid-failure/schema).",
+    "`.venv/bin/ruff check .` reports no errors.",
+    "`.venv/bin/python -m siting.sources.smoke` runs to completion and prints one OK/GAP line per endpoint; endpoints.py has no remaining unannotated resolve_at_build_start entry.",
+    "output/sample/ has the 5 files, 12 cells with the required variants, metadata `sample: true`, and passes test_schema.py.",
+    "tasks.md shows 1.4-1.6, 2.x, 3.x, 4.x and checkpoint 5 checked."
+  ],
+  "verification": [
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/ruff check .",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m siting.sources.smoke"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "validation.json",
+  "description": "Known-site validation report: exactly one entry per Validation_Site (Req 15). See docs/schema.md.",
+  "type": "array",
+  "minItems": 5,
+  "maxItems": 5,
+  "items": { "$ref": "#/$defs/Entry" },
+  "$defs": {
+    "Entry": {
+      "type": "object",
+      "required": [
+        "site",
+        "ref_lat",
+        "ref_lon",
+        "path",
+        "matched_cell_id",
+        "distance_mi",
+        "resource_percentile",
+        "status",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "site": {
+          "enum": [
+            "Muskeget Channel",
+            "Woods Hole",
+            "Cape Cod Canal/Bourne",
+            "Boston Harbor approaches",
+            "Cape Cod Bay"
+          ]
+        },
+        "ref_lat": { "type": "number", "minimum": -90, "maximum": 90 },
+        "ref_lon": { "type": "number", "minimum": -180, "maximum": 180 },
+        "path": { "enum": ["tidal_stream", "rise_fall"] },
+        "matched_cell_id": {
+          "type": ["string", "null"],
+          "pattern": "^C[0-9]+-[0-9]{4,}-[0-9]{4,}$"
+        },
+        "distance_mi": { "type": ["number", "null"], "minimum": 0 },
+        "resource_percentile": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "status": { "enum": ["pass", "validation failure", "not evaluated"] },
+        "reason": { "type": ["string", "null"] }
+      },
+      "allOf": [
+        {
+          "description": "not evaluated => non-empty reason; pass / validation failure => matched cell, distance, and percentile are non-null",
+          "if": { "properties": { "status": { "const": "not evaluated" } } },
+          "then": { "properties": { "reason": { "type": "string", "minLength": 1 } } },
+          "else": {
+            "properties": {
+              "matched_cell_id": { "type": "string" },
+              "distance_mi": { "type": "number" },
+              "resource_percentile": { "type": "number" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

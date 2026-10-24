@@ -1,0 +1,581 @@
+{
+ "schema_version": "1.0",
+ "run_timestamp_utc": "2026-10-24T14:03:22Z",
+ "cell_size_mi": 1.0,
+ "device_config": {
+  "cell_size_mi": {
+   "value": 1.0,
+   "unit": "statute mi"
+  },
+  "outer_extent_nm": {
+   "value": 12.0,
+   "unit": "nmi"
+  },
+  "rated_power_kw": {
+   "value": 100.0,
+   "unit": "kW"
+  },
+  "rotor_diameter_m": {
+   "value": 5.0,
+   "unit": "m"
+  },
+  "power_coefficient": {
+   "value": 0.4,
+   "unit": null
+  },
+  "pad_area_m2": {
+   "value": 50.0,
+   "unit": "m²"
+  },
+  "conversion_efficiency": {
+   "value": 0.3,
+   "unit": null
+  },
+  "tidal_cycles_per_year": {
+   "value": 705.8,
+   "unit": "cycles/yr"
+  },
+  "seawater_density": {
+   "value": 1025.0,
+   "unit": "kg/m³"
+  },
+  "velocity_source_priority": {
+   "value": [
+    "NECOFS_FVCOM",
+    "DOPPIO",
+    "MOM6",
+    "NOAA_CURRENTS"
+   ],
+   "unit": null
+  },
+  "min_power_density_wm2": {
+   "value": 500.0,
+   "unit": "W/m²"
+  },
+  "min_depth_m": {
+   "value": 5.0,
+   "unit": "m"
+  },
+  "min_qualifying_area_km2": {
+   "value": 0.5,
+   "unit": "km²"
+  },
+  "baseline_credit": {
+   "value": 40.0,
+   "unit": "score"
+  },
+  "benchmark_velocity_ms": {
+   "value": 2.5,
+   "unit": "m/s"
+  },
+  "max_station_distance_km": {
+   "value": 25,
+   "unit": "km"
+  },
+  "max_buoy_distance_km": {
+   "value": 100,
+   "unit": "km"
+  },
+  "min_range_m": {
+   "value": 1.0,
+   "unit": "m"
+  },
+  "max_range_m": {
+   "value": 3.0,
+   "unit": "m"
+  },
+  "grid_full_km": {
+   "value": 1,
+   "unit": "km"
+  },
+  "grid_zero_km": {
+   "value": 30,
+   "unit": "km"
+  },
+  "grid_weights": {
+   "value": {
+    "transmission": 0.5,
+    "substation": 0.5
+   },
+   "unit": null
+  },
+  "fish_zero_km": {
+   "value": 5,
+   "unit": "km"
+  },
+  "conflict_weights": {
+   "value": null,
+   "unit": null
+  },
+  "depth_bands": {
+   "value": {
+    "seabed": [
+     15,
+     35
+    ],
+    "buoy": [
+     5,
+     15
+    ]
+   },
+   "unit": "m"
+  },
+  "feasibility": {
+   "value": {
+    "slope_deg": [
+     5,
+     15
+    ],
+    "wave_hs_m": [
+     1,
+     3
+    ],
+    "port_km": [
+     10,
+     50
+    ]
+   },
+   "unit": "deg / m / km"
+  },
+  "profitability": {
+   "value": {
+    "k_transport_per_km": 0.01,
+    "k_transmission_per_km": 0.01,
+    "k_maint_port_per_km": 0.01,
+    "k_maint_wave_per_m": 0.1,
+    "baseline_annual_cost_usd": 20000
+   },
+   "unit": "1/km, 1/m, USD/yr"
+  },
+  "hard_exclusion_layers": {
+   "value": [
+    "protected_habitat",
+    "residential_shoreline",
+    "shipping_lanes",
+    "cable_areas"
+   ],
+   "unit": null
+  }
+ },
+ "citations": [
+  {
+   "id": "necofs-massbay",
+   "agency": "UMass Dartmouth SMAST",
+   "dataset": "NECOFS FVCOM MassBay forecast",
+   "endpoint": "http://www.smast.umassd.edu:8080/thredds/dodsC/FVCOM/NECOFS/Forecasts/NECOFS_FVCOM_OCEAN_MASSBAY_FORECAST.nc",
+   "date": "2026-10-23",
+   "date_kind": "model_run",
+   "note": "modeled current; SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "necofs-gom3",
+   "agency": "UMass Dartmouth SMAST",
+   "dataset": "NECOFS FVCOM GOM3 forecast",
+   "endpoint": "http://www.smast.umassd.edu:8080/thredds/dodsC/FVCOM/NECOFS/Forecasts/NECOFS_GOM3_FORECAST.nc",
+   "date": "2026-10-23",
+   "date_kind": "model_run",
+   "note": "modeled current; SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "coops-datums",
+   "agency": "NOAA CO-OPS",
+   "dataset": "Tidal datums (MN mean range)",
+   "endpoint": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/{id}/datums.json",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "MN values fetched live for the sample"
+  },
+  {
+   "id": "coops-harcon",
+   "agency": "NOAA CO-OPS",
+   "dataset": "Harmonic constituents (product=harcon)",
+   "endpoint": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/{id}/harcon.json",
+   "date": "2026-10-24",
+   "date_kind": "fetch"
+  },
+  {
+   "id": "ndbc-realtime2",
+   "agency": "NOAA NDBC",
+   "dataset": "Realtime2 standard meteorological data",
+   "endpoint": "https://www.ndbc.noaa.gov/data/realtime2/{STN}.txt",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "means of WVHT and DPD fetched live for the sample"
+  },
+  {
+   "id": "hifld-transmission",
+   "agency": "DHS HIFLD",
+   "dataset": "Electric Power Transmission Lines",
+   "endpoint": "https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Electric_Power_Transmission_Lines/FeatureServer/0/query",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "hifld-substations",
+   "agency": "DHS HIFLD",
+   "dataset": "Electric Substations",
+   "endpoint": "https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Electric_Substations/FeatureServer/0/query",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "massgis-utility",
+   "agency": "MassGIS",
+   "dataset": "Electric utility service areas by town (pubutil)",
+   "endpoint": "https://gis.massgis.digital.mass.gov/arcgis/rest/services (pubutil layer)",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "neodp-vessel",
+   "agency": "Northeast Ocean Data Portal",
+   "dataset": "AIS vessel transit counts",
+   "endpoint": "https://services.northeastoceandata.org/arcgis/rest/services (vessel density layer)",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "neodp-diadromous",
+   "agency": "Northeast Ocean Data Portal / MA DMF",
+   "dataset": "Diadromous fish monitoring stations",
+   "endpoint": "https://services.northeastoceandata.org/arcgis/rest/services (Fish/Diadromous layer)",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "emolt",
+   "agency": "NOAA NEFSC / eMOLT",
+   "dataset": "eMOLT bottom observations",
+   "endpoint": "https://erddap.emolt.net/erddap/tabledap/",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "nmfs-narw-ch",
+   "agency": "NOAA Fisheries",
+   "dataset": "North Atlantic right whale critical habitat (Unit 1)",
+   "endpoint": "https://www.fisheries.noaa.gov/resource/map/north-atlantic-right-whale-critical-habitat-map-and-gis-data",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "ncei-crm",
+   "agency": "NOAA NCEI",
+   "dataset": "U.S. Coastal Relief Model",
+   "endpoint": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/usgsCeCrm1",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "bts-ports",
+   "agency": "US DOT BTS",
+   "dataset": "NTAD Principal Ports",
+   "endpoint": "https://geo.dot.gov/server/rest/services (NTAD Principal Ports)",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "approximate port coordinates; SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "eia-retail",
+   "agency": "US EIA",
+   "dataset": "Electricity retail sales, MA all sectors (API v2)",
+   "endpoint": "https://api.eia.gov/v2/electricity/retail-sales/data/",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "price period 2025-10..2026-09 (illustrative); SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "marinecadastre-ssl",
+   "agency": "NOAA OCM MarineCadastre",
+   "dataset": "US State Submerged Lands (3 nm boundary)",
+   "endpoint": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/USStateSubmergedLands/MapServer/0/query",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "schematic geometry; SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "marinecadastre-fairways",
+   "agency": "NOAA OCM MarineCadastre",
+   "dataset": "Shipping Fairways, Lanes, and Zones",
+   "endpoint": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/ShippingFairwaysLanesZones",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "marinecadastre-cables",
+   "agency": "NOAA OCM MarineCadastre",
+   "dataset": "Submarine Cable Areas",
+   "endpoint": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/SubmarineCableAreas",
+   "date": "2026-10-24",
+   "date_kind": "fetch",
+   "note": "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run"
+  },
+  {
+   "id": "census-shoreline",
+   "agency": "US Census Bureau",
+   "dataset": "Cartographic Boundary states 1:500k (cb_2023_us_state_500k)",
+   "endpoint": "https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_us_state_500k.zip",
+   "date": "2026-10-24",
+   "date_kind": "fetch"
+  }
+ ],
+ "gap_summary": {
+  "NECOFS FVCOM": 1,
+  "Doppio": 1,
+  "MOM6": 1,
+  "NOAA CO-OPS current predictions": 1
+ },
+ "factors": [
+  {
+   "name": "velocity_peak",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": "m/s",
+   "label": "modeled current"
+  },
+  {
+   "name": "velocity_source_period",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": null,
+   "label": "modeled current"
+  },
+  {
+   "name": "power_density",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": "W/m²",
+   "label": "modeled current"
+  },
+  {
+   "name": "qualifying_area",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": "km²"
+  },
+  {
+   "name": "cf_stream",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": null
+  },
+  {
+   "name": "energy_stream_kwh",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": "kWh/yr"
+  },
+  {
+   "name": "depth",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "necofs-gom3",
+   "unit": "m"
+  },
+  {
+   "name": "tidal_range",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "coops-datums",
+   "unit": "m"
+  },
+  {
+   "name": "coops_station",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "coops-harcon",
+   "unit": null
+  },
+  {
+   "name": "energy_cycle_j",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "coops-datums",
+   "unit": "J"
+  },
+  {
+   "name": "energy_rise_fall_kwh",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "coops-datums",
+   "unit": "kWh/yr"
+  },
+  {
+   "name": "wave_power",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "ndbc-realtime2",
+   "unit": "kW/m"
+  },
+  {
+   "name": "wave_hs_mean",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "ndbc-realtime2",
+   "unit": "m"
+  },
+  {
+   "name": "dist_transmission_km",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "hifld-transmission",
+   "unit": "km"
+  },
+  {
+   "name": "dist_substation_km",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "hifld-substations",
+   "unit": "km"
+  },
+  {
+   "name": "utility",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "massgis-utility",
+   "unit": null,
+   "label": "distribution interconnection below 5 MW"
+  },
+  {
+   "name": "vessel_traffic",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "neodp-vessel",
+   "unit": "percentile"
+  },
+  {
+   "name": "fishing_activity",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "emolt",
+   "unit": "percentile"
+  },
+  {
+   "name": "diadromous_fish_km",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "neodp-diadromous",
+   "unit": "km"
+  },
+  {
+   "name": "whale_critical_habitat",
+   "tags": [
+    "QUANTIFIED DATA",
+    "EXTERNAL ADDITION"
+   ],
+   "citation_id": "nmfs-narw-ch",
+   "unit": null
+  },
+  {
+   "name": "port_km",
+   "tags": [
+    "PROXY",
+    "EXTERNAL ADDITION"
+   ],
+   "citation_id": "bts-ports",
+   "unit": "km"
+  },
+  {
+   "name": "price_usd_kwh",
+   "tags": [
+    "PROXY",
+    "EXTERNAL ADDITION"
+   ],
+   "citation_id": "eia-retail",
+   "unit": "USD/kWh"
+  },
+  {
+   "name": "gross_usd",
+   "tags": [
+    "PROXY",
+    "EXTERNAL ADDITION"
+   ],
+   "citation_id": "eia-retail",
+   "unit": "USD/yr"
+  },
+  {
+   "name": "m_transport",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "bts-ports",
+   "unit": null
+  },
+  {
+   "name": "m_transmission",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "hifld-transmission",
+   "unit": null
+  },
+  {
+   "name": "m_maint",
+   "tags": [
+    "PROXY"
+   ],
+   "citation_id": "ndbc-realtime2",
+   "unit": null
+  },
+  {
+   "name": "net_usd",
+   "tags": [
+    "PROXY",
+    "EXTERNAL ADDITION"
+   ],
+   "citation_id": "eia-retail",
+   "unit": "USD/yr"
+  },
+  {
+   "name": "cf_rise_fall",
+   "tags": [
+    "QUANTIFIED DATA"
+   ],
+   "citation_id": "coops-datums",
+   "unit": null
+  }
+ ],
+ "tier3_notice": "Public sentiment and local law are narrative only and are not scored.",
+ "disclaimer": "Not legal advice",
+ "known_limitations": [
+  "SAMPLE DATA: hand-built for frontend development (task 1.5); values are illustrative, not a pipeline run. Velocity series, grid/conflict distances and percentiles are synthetic; CO-OPS MN ranges and NDBC wave means were fetched live.",
+  "NECOFS forecast window 2026-10-23..2026-10-28 may not include spring tide; peaks and CF cover only that window.",
+  "3 nm boundary geometry is schematic in the sample.",
+  "Slope sub-score not computed (stretch); Feasibility uses depth, wave exposure, and port distance.",
+  "Profitability is illustrative, not a financial projection; one sample cell omits it to exercise the 'Profitability not computed' path."
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Resource score (spec tasks 6.1-6.10) and Feasibility core (8.1-8.2). Depends on FEAT-001 (fetch layer, grid, provenance). Independent of FEAT-003.",
+  "status": "pending",
+  "steps": [
+    "Read tasks.md sections 6 and 8, design.md Resource/Feasibility sections and Properties 10-15, steering tidal-siting-data.md. Read FEAT-001 findings for resolved endpoints.",
+    "6.1: sources/necofs.py (MassBay first, GOM3 fallback; load lonc/latc once, nearest element per cell centroid with numpy in UTM meters, reject > 2 km as 'no coverage'; subset ua/va over a contiguous element-index range in chunks and over the forecast window, cache netCDF bytes through FetchClient's OPeNDAP path; `h` at nearest node for depth), sources/doppio.py and sources/mom6.py (ubar/vbar at nearest rho point; MOM6 skipped as a gap if FEAT-001 left it unresolved), sources/coops_currents.py (nearest currentpredictions station within 5 km). Each returns (source, t_start, t_end, speeds_ms, model_run_date) or DataGap; a resolver follows cfg.velocity_source_priority. model_run_date comes from the dataset's own metadata (global attrs / first time value), never today's date.",
+    "6.2: score/resource.py tidal stream: power_density = 0.5*rho*v_peak**3 (cubic; never linear), thresholds, edge-adjacent flood fill for qualifying_area, sub-score ramp(P, P_min, P_bench, baseline_credit, 100), CF from clipped per-step 0.5*rho*A*Cp*v^3, energy = rated*CF*8760, 'below EPRI thresholds'. Emit factors velocity_peak (label 'modeled current', citation dataset NECOFS FVCOM/Doppio/MOM6, date_kind model_run; or 'predicted current (harmonic)' for CO-OPS), velocity_source_period, power_density, depth, qualifying_area, cf_stream, energy_stream_kwh; velocity gap -> all null with gap.",
+    "6.6: sources/coops.py harcon station list, harcon.json (M2 supporting record), datums.json MN; nearest by haversine; beyond max_station_distance_km or empty harcon -> gap. Never use the kit's one-month Boston gauge. Rise/fall scoring in score/resource.py with factors tidal_range, coops_station, energy_cycle_j, cf_rise_fall, energy_rise_fall_kwh.",
+    "6.9: sources/ndbc.py (activestations.xml, nearest within max_buoy_distance_km, realtime2 parse dropping MM, mean WVHT/DPD, record start/end); wave_power, wave_hs_mean with note 'not blended', excluded from Resource; Resource combiner (max non-null, ties -> tidal_stream, both null -> null + gap).",
+    "6.3, 6.4, 6.5, 6.7, 6.8, 6.10: property tests per tasks.md filenames, with synthetic inputs and fake transports (no network in tests).",
+    "8.1: sources/bathy.py (NCEI CRM ERDDAP griddap fallback depth), sources/ports.py (principal ports from the resolved NTAD endpoint, or gap), score/feasibility.py depth band per device path, wave ramp(H,1,3,100,0) reusing NDBC, port ramp(d,10,50,100,0), equal-weight available mean, feasibility_omitted, all-gap -> null + gap. 8.2: tests/test_feasibility.py.",
+    "Check boxes 6.x, 6, 8.x, 8 in tasks.md as each passes."
+  ],
+  "acceptance_criteria": [
+    "pytest -q passes including test_velocity_priority_props, test_power_density_props (k^3 scaling), test_stream_score_props, test_cf_props, test_rise_fall_props, test_resource_combine_props, test_feasibility.",
+    "ruff check passes.",
+    "A small live check (one or two real cell centroids, e.g. Muskeget Channel and Cape Cod Bay) returns a velocity series with a model run date and a CO-OPS station; record the output (or the gap reason) in findings.",
+    "No code path substitutes 0 or a neighbor value for a gap."
+  ],
+  "verification": [
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/ruff check ."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

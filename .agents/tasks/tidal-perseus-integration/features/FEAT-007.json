@@ -1,0 +1,27 @@
+{
+  "id": "FEAT-007",
+  "type": "feat",
+  "description": "STRETCH tasks 15-18 (cuttable, in plan.md cut order: 17 and 15 cut first, then 16, keep 18 if at all possible) and RELEASE 19-20, then re-run the pipeline, re-import into Perseus, rebuild. Depends on FEAT-006.",
+  "status": "pending",
+  "steps": [
+    "Read tasks.md sections 15-20 and design.md Profitability; plan.md (a) cut order and (e).",
+    "18.1 (keep): research Tier 3 public-sentiment signal for the current top-5 cells (rankRows over real output) using only reliable sources per steering (BOEM/CZM comment records, nearby offshore-wind project reception such as Vineyard Wind / New England Wind / SouthCoast Wind proceedings, municipal meeting minutes, established local news). Author output/sentiment.json {cell_id: {note, citations[]}} with agency/outlet, title, URL, date; text only. If nothing reliable is found for a cell, omit it. Add the output.py pass-through so a real run carries sentiment.json forward. Validate against docs/schema/sentiment.schema.json. 18.2: Perseus already renders it (FEAT-006); add 'No public sentiment source found' for top-5 cells without a note.",
+    "16.1-16.4: sources/eia.py + score/profitability.py wired into run.py: EIA_API_KEY from env only (never hardcode, never write it to output or logs); missing key -> gap 'fetch failure: no API key' and Profitability null for all cells. Multipliers PROXY >= 1, min-max normalization. Perseus: model/profitability.js port, show price, gross, multipliers, net and 'Illustrative, not a financial projection' in the Profit tab when present; extend cross-lang fixture. If no EIA_API_KEY is set, still ship code + gap path and say so.",
+    "15.x and 17.x: implement only if time remains after 16, 18, 19; otherwise leave unchecked and list as cut in tasks.md Notes.",
+    "19.1: .gitignore covers cache, .env, keys, build artifacts (also Perseus has node_modules ignored); add /Users/michaellaschaszberger/Desktop/hackachusetts/.env.example with 'EIA_API_KEY=' placeholder; README commands match pyproject/package.json scripts; output/sample referenced. 19.2: pipeline/tests/test_repo_hygiene.py using `git ls-files --cached --others --exclude-standard` (nothing is committed) asserting no data/cache content except .gitkeep, no .env/*.key, no Python under frontend/, no TS under pipeline/.",
+    "Re-run the pipeline real run (cache makes it fast), then `npm run data:import -- /Users/michaellaschaszberger/Desktop/hackachusetts/output` and `npm run build` in Perseus. 20: full pytest, ruff, npm test. Check boxes for every completed task; list cut tasks with reason in tasks.md Notes."
+  ],
+  "acceptance_criteria": [
+    "pytest -q, ruff, and Perseus npm test pass; real run exits 0; Perseus build exits 0 with refreshed public/data and dist/data.",
+    "sentiment.json (if produced) contains only text + citations, validates against the schema, and no score function reads it (test_nonscoring_props still passes).",
+    "No API key or secret appears in any file; EIA key read from env only.",
+    "tasks.md: every finished task checked; every cut stretch task unchecked and listed with a reason in Notes; 19.x and 20 checked."
+  ],
+  "verification": [
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q && .venv/bin/ruff check .",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m siting.run --config ../config/device_config.yaml --out ../output; echo exit=$?",
+    "cd \"/Users/michaellaschaszberger/Downloads/perseus-night-watch 2\" && npm run data:import -- /Users/michaellaschaszberger/Desktop/hackachusetts/output && npm test && npm run build"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

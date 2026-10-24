@@ -1,0 +1,27 @@
+{
+  "id": "FEAT-003",
+  "type": "feat",
+  "description": "Track C: Grid Proximity (7.1-7.3), Hard_Exclusions (7.4-7.6), graded Conflict (7.7), Jurisdiction (7.8-7.9). Depends on FEAT-001; independent of FEAT-002.",
+  "status": "pending",
+  "steps": [
+    "Read tasks.md section 7, design.md Grid Proximity / Conflict / Jurisdiction sections and Properties 18-20, steering tidal-siting-data.md, and FEAT-001 findings (resolved endpoints).",
+    "7.1: sources/hifld.py transmission lines (returnGeometry=true) + substations, envelope = grid bbox + 50 km, paginate on exceededTransferLimit with resultOffset, primary then fallback from endpoints.py. sources/massgis.py utility service territory by town. score/grid_proximity.py: STRtree nearest in UTM km rounded 0.01, utility containing or nearest with label 'distribution interconnection below 5 MW' tagged PROXY (keep the utility NAME string from the layer so Perseus can map it to contacts), ramp sub-scores, weighted component; failed/empty layer -> per-cell gap and remaining sub-score only. Return FactorResult objects.",
+    "7.2, 7.3: tests/test_distance_props.py, tests/test_grid_proximity.py.",
+    "7.4: sources/marinecadastre.py (shipping fairways, submarine cable areas, MPA inventory), extend sources/massgis.py (NHESP priority habitat, residential land use, public beaches); score/conflict.py exclusions(): polygon intersects, record every triggering layer + citation; failed/empty layer -> gap, no exclusion from it, exclusion_check_incomplete on every cell. 7.5, 7.6 tests.",
+    "7.7: sources/neodp.py (AIS vessel transit density, diadromous fish stations), sources/emolt.py (ERDDAP points); vessel_traffic and fishing_activity percentile-normalized PROXY, diadromous_fish_km ramp to fish_zero_km PROXY (never an exclusion), whale_critical_habitat QUANTIFIED DATA + EXTERNAL ADDITION graded not excluded; component via weighted_mean_available; all null -> null + gap.",
+    "7.8: siting/jurisdiction.py: MarineCadastre US State Submerged Lands (MA), BOEM fallback; covers(centroid) -> state/MA CZM else federal/BOEM; straddles_boundary; disclaimer 'Not legal advice'; failure -> null + gap on every cell; export boundary line for boundary_3nm.geojson; signatures keep jurisdiction out of every score function. 7.9 property test.",
+    "Check boxes 7.x and 7 in tasks.md as each passes."
+  ],
+  "acceptance_criteria": [
+    "pytest -q passes including test_distance_props, test_grid_proximity, test_exclusion_props, test_exclusion_incomplete, test_jurisdiction_props.",
+    "ruff check passes.",
+    "One live fetch per layer over a small MA bbox either returns features or records a named gap; outcomes listed in findings.",
+    "No score function accepts jurisdiction as a parameter."
+  ],
+  "verification": [
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/python -m pytest -q",
+    "cd /Users/michaellaschaszberger/Desktop/hackachusetts/pipeline && .venv/bin/ruff check ."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

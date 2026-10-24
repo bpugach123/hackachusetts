@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "timeseries.json",
+  "description": "Per-cell depth-averaged current speed series, keyed by cell_id. Only cells with velocity data appear. Raw input for the frontend CF recompute. See docs/schema.md.",
+  "type": "object",
+  "propertyNames": { "pattern": "^C[0-9]+-[0-9]{4,}-[0-9]{4,}$" },
+  "additionalProperties": { "$ref": "#/$defs/Series" },
+  "$defs": {
+    "Series": {
+      "type": "object",
+      "required": ["t0", "dt_s", "speeds_ms"],
+      "additionalProperties": false,
+      "properties": {
+        "t0": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$",
+          "description": "ISO 8601 UTC timestamp of the first sample."
+        },
+        "dt_s": { "type": "number", "exclusiveMinimum": 0, "description": "Sample spacing in seconds." },
+        "speeds_ms": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "number", "minimum": 0 },
+          "description": "Depth-averaged speed in m/s."
+        }
+      }
+    }
+  }
+}

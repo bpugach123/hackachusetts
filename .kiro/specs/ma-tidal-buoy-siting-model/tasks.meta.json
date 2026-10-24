@@ -1,0 +1,557 @@
+{
+  "pbtResults": {
+    "2.2 [A] Property test: config validation gates the run": {
+      "status": "passed",
+      "lastRunTimestamp": 1792875314271
+    }
+  },
+  "executionHistory": {
+    "1.1 [A] Scaffold the Python pipeline package": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867125868
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867132377
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867744720
+      }
+    ],
+    "1.2 [B] Scaffold the frontend": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867125914
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867133603
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867745878
+      }
+    ],
+    "1.3 [D] Write the Static_Output schema docs": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867125955
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867134493
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867746767
+      }
+    ],
+    "1.4 [C] Endpoint smoke test (first hour)": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867125988
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867752425
+      },
+      {
+        "executionId": "6ba995c1-e0bb-4028-8338-24cab017d926",
+        "chatSessionId": "sess_d78ba50d-5619-40de-b44d-1d9e6f606782",
+        "timestamp": 1792871605936
+      },
+      {
+        "executionId": "6ba995c1-e0bb-4028-8338-24cab017d926",
+        "chatSessionId": "sess_d78ba50d-5619-40de-b44d-1d9e6f606782",
+        "timestamp": 1792874324757
+      }
+    ],
+    "1.5 [D] Hand-build `output/sample/` (unblocks Track B)": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126025
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867753627
+      },
+      {
+        "executionId": "cc59faa8-8cf4-440a-81ed-679357449aa9",
+        "chatSessionId": "sess_3306b052-7721-4e5a-9fd8-535ffef2e196",
+        "timestamp": 1792874342769
+      },
+      {
+        "executionId": "cc59faa8-8cf4-440a-81ed-679357449aa9",
+        "chatSessionId": "sess_3306b052-7721-4e5a-9fd8-535ffef2e196",
+        "timestamp": 1792874803942
+      }
+    ],
+    "2.1 [A] Implement Device_Config loading and validation": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126058
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867754774
+      },
+      {
+        "executionId": "b64a239f-3071-41d5-ad20-c8f2d3732ad5",
+        "chatSessionId": "sess_7bb152b0-051b-44ce-a3e9-831e6003618e",
+        "timestamp": 1792874870775
+      },
+      {
+        "executionId": "b64a239f-3071-41d5-ad20-c8f2d3732ad5",
+        "chatSessionId": "sess_7bb152b0-051b-44ce-a3e9-831e6003618e",
+        "timestamp": 1792875060404
+      }
+    ],
+    "2.3 [A] Implement `score/ramps.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126082
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867755986
+      },
+      {
+        "executionId": "b64a239f-3071-41d5-ad20-c8f2d3732ad5",
+        "chatSessionId": "sess_7bb152b0-051b-44ce-a3e9-831e6003618e",
+        "timestamp": 1792874872307
+      },
+      {
+        "executionId": "b64a239f-3071-41d5-ad20-c8f2d3732ad5",
+        "chatSessionId": "sess_7bb152b0-051b-44ce-a3e9-831e6003618e",
+        "timestamp": 1792875061621
+      }
+    ],
+    "2.6 [A] Implement `provenance.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126109
+      },
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867757007
+      },
+      {
+        "executionId": "b64a239f-3071-41d5-ad20-c8f2d3732ad5",
+        "chatSessionId": "sess_7bb152b0-051b-44ce-a3e9-831e6003618e",
+        "timestamp": 1792874873011
+      },
+      {
+        "executionId": "b64a239f-3071-41d5-ad20-c8f2d3732ad5",
+        "chatSessionId": "sess_7bb152b0-051b-44ce-a3e9-831e6003618e",
+        "timestamp": 1792875062364
+      }
+    ],
+    "3.1 [A] Implement `fetch/client.py`, `fetch/cache.py`, `fetch/gaps.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126141
+      },
+      {
+        "executionId": "204fed9f-d51d-4ade-9929-5afe51971818",
+        "chatSessionId": "sess_45a55ce8-1946-4308-b2f1-fed6d0fb0c95",
+        "timestamp": 1792875079140
+      },
+      {
+        "executionId": "204fed9f-d51d-4ade-9929-5afe51971818",
+        "chatSessionId": "sess_45a55ce8-1946-4308-b2f1-fed6d0fb0c95",
+        "timestamp": 1792875245205
+      }
+    ],
+    "4.1 [A] Implement the shoreline source and `grid.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126166
+      },
+      {
+        "executionId": "aa596ee7-7cc2-4a20-9425-70847e9c1f36",
+        "chatSessionId": "sess_5e3a465c-f42d-433e-add1-c4eeaf423f4b",
+        "timestamp": 1792875338426
+      },
+      {
+        "executionId": "aa596ee7-7cc2-4a20-9425-70847e9c1f36",
+        "chatSessionId": "sess_5e3a465c-f42d-433e-add1-c4eeaf423f4b",
+        "timestamp": 1792875706932
+      }
+    ],
+    "5. Checkpoint: foundations": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126198
+      }
+    ],
+    "6.1 [A] Implement velocity sources": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126230
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792875771074
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792876611137
+      }
+    ],
+    "6.2 [A] Implement tidal-stream scoring in `score/resource.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126256
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792876615391
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792876924087
+      }
+    ],
+    "6.6 [A] Implement rise/fall scoring": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126281
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792875771676
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792876612420
+      }
+    ],
+    "6.9 [A] Implement wave context and the Resource combiner": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126310
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792876925179
+      },
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792877119124
+      }
+    ],
+    "7.1 [C] Implement Grid Proximity": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126333
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792877247924
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792877745099
+      }
+    ],
+    "7.4 [C] Implement Hard_Exclusions": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126358
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792877747418
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792878521055
+      }
+    ],
+    "7.7 [C] Implement graded Conflict sub-scores": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126389
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792878521965
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792879796674
+      }
+    ],
+    "7.8 [C] Implement `jurisdiction.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126416
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792877247960
+      },
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792877746284
+      }
+    ],
+    "8.1 [A] Implement `score/feasibility.py` core": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126443
+      },
+      {
+        "executionId": "70b5fe14-01dc-49fa-ac37-374be883a0ab",
+        "chatSessionId": "sess_d611190a-b126-403a-a86b-9bbe4a60680e",
+        "timestamp": 1792880436678
+      },
+      {
+        "executionId": "70b5fe14-01dc-49fa-ac37-374be883a0ab",
+        "chatSessionId": "sess_d611190a-b126-403a-a86b-9bbe4a60680e",
+        "timestamp": 1792880988529
+      }
+    ],
+    "9.1 [A] Implement `validation.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126473
+      },
+      {
+        "executionId": "07b1195a-a9b1-43f5-baf7-fd4dab1e5ca2",
+        "chatSessionId": "sess_c51df508-bed3-4bde-bf41-ef8be026ecc5",
+        "timestamp": 1792881013319
+      }
+    ],
+    "9.3 [A] Implement `output.py` and the Python `score/overall.py`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126498
+      }
+    ],
+    "9.4 [A] Wire `run.py` end to end": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126525
+      }
+    ],
+    "10. Checkpoint: backend core": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126555
+      }
+    ],
+    "11.1 [B] Implement `src/data/load.ts`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126581
+      }
+    ],
+    "11.2 [B] Implement `model/ramps.ts` and `model/overall.ts`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126606
+      }
+    ],
+    "11.5 [B] Implement `model/sort.ts` and `model/bins.ts`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126632
+      }
+    ],
+    "11.8 [B] Implement `model/resource.ts` and `model/config.ts`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126659
+      }
+    ],
+    "12.1 [B] Implement app state, gap rendering, and the provenance legend": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126699
+      }
+    ],
+    "12.3 [B] Implement `MapView.tsx`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126724
+      }
+    ],
+    "12.4 [B] Implement `RankedTable.tsx`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126751
+      }
+    ],
+    "12.6 [B] Implement `CellPanel.tsx` and `TopFive.tsx`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126776
+      }
+    ],
+    "12.7 [B] Implement `WeightSliders.tsx` and `DeviceConfigPanel.tsx`, and wire them in `App.tsx`": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126806
+      }
+    ],
+    "13.1 [A+B] Point the frontend at real pipeline output": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126830
+      }
+    ],
+    "13.2 [D] Draft the README": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126857
+      }
+    ],
+    "14. Checkpoint: WORKING CORE": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126882
+      }
+    ],
+    "19.1 [D] Finalize repo hygiene and the README": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126908
+      }
+    ],
+    "20. Final checkpoint": [
+      {
+        "executionId": "2e27ead6-5143-4836-bece-387cd54a3c75",
+        "chatSessionId": "sess_3e767fa7-f0e2-4337-b051-5f9c88e58330",
+        "timestamp": 1792867126933
+      }
+    ],
+    "1.6 [D] Write a schema conformance test": [
+      {
+        "executionId": "7f5b88c0-84f3-41be-b428-b3293b290b7c",
+        "chatSessionId": "sess_f4964b7c-e557-42df-9593-d7e7463206e6",
+        "timestamp": 1792874819032
+      }
+    ],
+    "3. [A] Fetch, cache, and Data_Gap layer": [
+      {
+        "executionId": "204fed9f-d51d-4ade-9929-5afe51971818",
+        "chatSessionId": "sess_45a55ce8-1946-4308-b2f1-fed6d0fb0c95",
+        "timestamp": 1792875245263
+      }
+    ],
+    "2.2 [A] Property test: config validation gates the run": [
+      {
+        "executionId": "8751aeaf-2e71-4874-8ac5-6ac2a4a69af5",
+        "chatSessionId": "sess_c0667a0b-725b-462f-96c1-89a6c18c5f2a",
+        "timestamp": 1792875261265
+      },
+      {
+        "executionId": "8751aeaf-2e71-4874-8ac5-6ac2a4a69af5",
+        "chatSessionId": "sess_c0667a0b-725b-462f-96c1-89a6c18c5f2a",
+        "timestamp": 1792875322860
+      }
+    ],
+    "2. [A] Config, score helpers, and provenance model": [
+      {
+        "executionId": "8751aeaf-2e71-4874-8ac5-6ac2a4a69af5",
+        "chatSessionId": "sess_c0667a0b-725b-462f-96c1-89a6c18c5f2a",
+        "timestamp": 1792875322909
+      }
+    ],
+    "4. [A] Land-masked grid": [
+      {
+        "executionId": "aa596ee7-7cc2-4a20-9425-70847e9c1f36",
+        "chatSessionId": "sess_5e3a465c-f42d-433e-add1-c4eeaf423f4b",
+        "timestamp": 1792875706972
+      }
+    ],
+    "6. [A] Resource score (tidal stream, rise/fall, wave context)": [
+      {
+        "executionId": "2b242378-a7d2-4a1e-815c-74d7a2c78805",
+        "chatSessionId": "sess_afb01c37-f905-45a3-ad96-e0b433baded9",
+        "timestamp": 1792877119159
+      }
+    ],
+    "7. [C] Grid Proximity, Conflict + Hard_Exclusions, Jurisdiction": [
+      {
+        "executionId": "77180d52-bb61-4b3c-870d-5f82c6973ecf",
+        "chatSessionId": "sess_a708fb2b-6444-46d6-9216-398eea0d3e3a",
+        "timestamp": 1792879796756
+      }
+    ],
+    "8. [A] Feasibility (core sub-scores: depth, wave, port)": [
+      {
+        "executionId": "70b5fe14-01dc-49fa-ac37-374be883a0ab",
+        "chatSessionId": "sess_d611190a-b126-403a-a86b-9bbe4a60680e",
+        "timestamp": 1792880988580
+      }
+    ]
+  }
+}
