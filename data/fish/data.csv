@@ -1,0 +1,30 @@
+river,station_type,town,year_installed,temp_logger,water_chemistry
+Acushnet River,River Herring,Acushnet,2005,Y,Y
+Acushnet River,YOY eel trap,Acushnet,2005,Y,Y
+Acushnet River,YOY eel trap,Acushnet,2005,Y,Y
+Back River,River Herring,Weymouth,0,Y,N
+Cold Brook,Eel ramp,Harwich,2008,Y,N
+Crane River,Smelt fyke net,Danvers,2005,Y,Y
+Fore River,Smelt fyke net,Braintree,2004,Y,Y
+Jones River,Smelt fyke net,Kingston,2004,Y,Y
+Jones River,YOY eel trap,Kingston,2001,Y,Y
+Masphee River,River Herring,Masphee,2012,N,Y
+Mill Brook,Eel ramp,Rockport,0,,N
+Monument River,River Herring,Bourne,1985,Y,Y
+Mystic Lakes,Eel ramp,Medford,2011,Y,N
+Nemasket River,River Herring,Middleboro,1996,N,Y
+North River,Smelt fyke net,Salem,2005,Y,Y
+Parker River,Smelt fyke net,Newbury,2004,Y,Y
+Parker River,River Herring,Newbury,2012,Y,Y
+Parker River,YOY eel trap,Newbury,2005,Y,Y
+Pilgrim Lake,Eel ramp,Orleans,2010,Y,N
+Saugus River,Eel ramp,Lynnfield,2007,Y,Y
+Saugus River,Smelt fyke net,Saugus,2004,Y,Y
+Saugus River,YOY eel trap,Saugus,2005,Y,Y
+Sippican River,River Herring,Rochester,0,,
+Sippican River,River Herring,Rochester,0,,
+Smelt Brook,Eel ramp,Braintree,0,,
+Town Brook,River Herring,Plymouth,2004,Y,Y
+Wankinco River,Eel ramp,Wareham,2009,Y,N
+Westport River,Smelt fyke net,Westport,2008,Y,Y
+Weweantic River,Smelt fyke net,Wareham,2008,Y,Y
