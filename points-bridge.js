@@ -227,14 +227,6 @@
     return app && app.state && app.state.theme === 'light' ? 'light' : 'dark';
   }
 
-  function summaryText(tech) {
-    var t = store().technologies[tech];
-    var s = (t && t.summary && t.summary.status) || {};
-    return (
-      label(tech) + ': ' + (s.Scored || 0) + ' of ' + (t ? t.points.length : 0) + ' NOAA stations scored'
-    );
-  }
-
   function syncToggle() {
     if (!toggleEl) return;
     var pal = PALETTE[theme()];
@@ -250,11 +242,6 @@
       buttons[i].style.color = on ? pal.text : pal.muted;
       buttons[i].style.fontWeight = on ? '600' : '500';
     }
-    var caption = toggleEl.querySelector('[data-role="caption"]');
-    if (caption) {
-      caption.textContent = summaryText(tech);
-      caption.style.color = pal.muted;
-    }
   }
 
   function mountToggle() {
@@ -265,7 +252,7 @@
     group.setAttribute('aria-label', 'Turbine technology');
     group.style.cssText =
       'position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;display:flex;' +
-      'flex-direction:column;align-items:center;gap:4px;padding:6px 8px;border:1px solid;' +
+      'align-items:center;padding:6px 8px;border:1px solid;' +
       'border-radius:12px;font-family:"Space Grotesk","Segoe UI",system-ui,sans-serif;font-size:13px;' +
       'box-shadow:0 8px 24px rgba(0,0,0,0.25)';
     var row = document.createElement('div');
@@ -283,12 +270,7 @@
       });
       row.appendChild(b);
     });
-    var caption = document.createElement('div');
-    caption.setAttribute('data-role', 'caption');
-    caption.setAttribute('aria-live', 'polite');
-    caption.style.cssText = 'font-size:11px';
     group.appendChild(row);
-    group.appendChild(caption);
     document.body.appendChild(group);
     toggleEl = group;
     syncToggle();
